@@ -1,0 +1,239 @@
+@CHARSET "ISO-8859-1";
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form *{
+	box-sizing: border-box;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form{
+	max-width: 500px;
+	background: rgba(45, 187, 255, 0.38);
+	background: linear-gradient(to top left, rgb(1, 38, 80), rgba(109, 161, 185, 0.58));
+	background: -webkit-linear-gradient(to top left, rgba(57, 162, 212, 0.9), rgba(109, 161, 185, 0.58));
+	padding: 20px;
+	border-radius: 8px;
+	transition: all 0.3s ease-in;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form h3{
+	color: #fff;
+	position: relative;
+	text-shadow: 0px 1px 1px #4d4d4d;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container label{
+	text-shadow: 0px -1px 1px rgba(7, 108, 156, 0.5);
+	display: block;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	width: 44px;
+	height: 28px;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	background-image: url('../../img/payment-method-sprites.png');
+}
+body.wc-braintree-body .small-container .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-small-width .wc-braintree-card-type{
+	top: -10px;
+	right: 6px;
+}
+@media (max-width: 375px){
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type{
+	top: -10px;
+}	
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper{
+	margin-bottom: 20px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper:last-child{
+	margin-bottom: 0px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .wc-braintree-form-wrapper{
+	margin-bottom: 0px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container{
+	    align-self: flex-end;
+	    flex: 1;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container.field-save{
+	align-self: flex-start;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-year{
+	max-width: 80px;
+	margin-left: 10px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-cvv{
+	max-width: 80px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-exp-month{
+	max-width: 120px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-postal{
+	max-width: 210px;
+}
+
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-save{
+	width: 80px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-save{
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-end;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .hosted-field{
+	height: 40px;
+	background: rgba(255, 255, 255, 0.88);
+	position: relative;
+	/* background-color: #fff; */
+	padding-left: 10px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.6), inset 0px 1px 1px 0px rgba(0,0,0,.6);
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .hosted-field.braintree-hosted-fields-invalid{
+	box-shadow: 0px 1px 12px 3px rgba(247, 70, 70, 0.6), inset 0px 1px 1px 0px rgba(0,0,0,.6);
+	background: rgb(247, 230, 230);
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .hosted-field.braintree-hosted-fields-valid{
+	box-shadow: 0px 1px 12px 3px rgba(202, 255, 205, 0.46), inset 0px 1px 1px 0px rgba(0,0,0,.6);
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form label{
+	color: #fff;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper{
+	display: flex;
+	display: -webkit-flex;
+	position: relative;
+}
+
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper{
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+@media (max-width: 400px){
+
+}
+@media (max-width: 450px){
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper{
+	flex-wrap: wrap;	
+}
+
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper{
+	margin-bottom: 10px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-field-container.field-save{
+	width: 40px;
+}
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.visa {
+	background-size: 86px auto;
+	background-position: 0 -429px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.master-card {
+	background-size: 86px auto;
+	background-position: 0 -317px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.discover {
+	background-size: 84px auto;
+	background-position: 0 -199px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.diners-club {
+	background-size: 110px auto;
+	background-position: 0 -230px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.maestro {
+	background-size: 86px auto;
+	background-position: 0 -289px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.american-express {
+	background-size: 86px auto;
+	background-position: 0 -399px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.jcb {
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.open.unionpay {
+	background-size: 86px auto;
+	background-position: 0 -261px;
+}
+
+/******* enclosed *******/
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	-webkit-transform: translatey(-50%);
+	-ms-transform: translatey(-50%);
+	right: 5px;
+	width: 35px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+    border-radius: 3px;
+}
+
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.visa{
+	background-image: url('../../img/payment-methods/visa.png');
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.master-card{
+	background-image: url('../../img/payment-methods/master_card.png');
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.discover{
+	background-image: url('../../img/payment-methods/discover.png');
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.diners-club{
+	background-image: url('../../img/payment-methods/diners_club_international.png');
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.maestro{
+	background-image: url('../../img/payment-methods/maestro.png');
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.american-express{
+	background-image: url('../../img/payment-methods/amex.png');
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container .wc-braintree-card-type.enclosed.jcb{
+	background-image: url('../../img/payment-methods/jcb.png');
+}
+/***********************/
+
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container input[type="checkbox"]{
+	display: none;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container label.wc-braintree-save-label:after{
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.88);;
+	border-radius: 3px;
+	box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,.6);
+	transition: all 0.3s ease-in;
+	box-sizing: border-box;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-field-container input[type="checkbox"]:checked + label.wc-braintree-save-label:after{
+	    background-color: rgba(202, 255, 205, 0.52);
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-small-form .wc-braintree-field-container.field-cvv,
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-small-form .wc-braintree-field-container.field-save{
+	position: relative !important;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-small-form .wc-braintree-field-container.field-postal{
+	max-width: 120px;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .wc-braintree-field-container:last-of-type:not(:first-child){
+
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .wc-braintree-field-container.field-year{
+	position: relative !important;
+}
+body.wc-braintree-body .wc-braintree-new-payment-method-container .wc-braintree-card-form .wc-braintree-form-wrapper .streetAddress input[type="text"]{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}

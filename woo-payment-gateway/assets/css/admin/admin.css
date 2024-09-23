@@ -1,0 +1,430 @@
+@CHARSET "ISO-8859-1";
+.wc-braintree-settings-container {
+    padding: 0 0.5em;
+}
+
+.wc-braintree-cc-desc {
+    margin: 0;
+}
+
+.wc-braintree-cc-desc + p {
+    margin-top: 0;
+}
+
+.wc-braintree-conditional-statement {
+    width: 100% !important;
+}
+
+.wc-braintree-delete-row {
+    cursor: pointer;
+}
+
+.wc-braintree-kount-url {
+    font-weight: 500;
+    position: relative;
+}
+
+.wc-braintree-webhook-url {
+    font-weight: 500;
+    position: relative;
+}
+
+.braintree_cc .wc-braintree-card-icon {
+    width: 36px;
+    vertical-align: middle;
+}
+
+.woocommerce table.form-table td.wc-braintree-merchant-currency .select2-container {
+    min-width: 170px !important;
+}
+
+#wpbody-content .woocommerce nav.woo-nav-tab-wrapper {
+    min-height: 35px;
+}
+
+.woocommerce table.wc-braintree-merchant-table th,
+.woocommerce table.wc-braintree-merchant-table td {
+    padding: 15px 0px;
+}
+
+.wc-braintree-nav-tab {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-left: .5em;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    background: #e5e5e5;
+    color: #555;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.wc-braintree-nav-tab.nav-tab-active {
+    border-bottom: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    color: #000;
+}
+
+.wc-braintree-nav-tab:focus, .wc-braintree-nav-tab:hover {
+    background-color: #fff;
+    color: #444;
+}
+
+.wc-braintree-settings-logo {
+    margin: 2em 1em 0.5em 0;
+}
+
+.wc-braintree-settings-logo img {
+    width: 150px;
+    max-width: 150px;
+    margin-left: 0.5em;
+}
+
+.wc-braintree-docs {
+    margin-top: 1em;
+}
+
+.wc-braintree-docs .button {
+    margin-left: 0.5em;
+}
+
+.wc-braintree-advanced-settings-nav {
+    margin-top: 1em;
+}
+
+.wc-braintree-advanced-settings-nav .nav-link:nth-child(n+2) {
+    margin-left: 0.5em;
+}
+
+.wc-braintree-advanced-settings-nav .nav-link-active {
+    color: #555;
+    font-weight: 500;
+}
+
+.local-gateways {
+    padding: 0 0.5em;
+}
+
+.form-table .wc-braintree-fee-tr td {
+    padding: 10px 0px;
+}
+
+#wc-braintree-fee-tbody td:nth-child(n+2) {
+    padding: 15px 10px;
+}
+
+.wc-order-capture-charge-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+}
+
+.wc-order-capture-charge-container .wc-order-capture-charge {
+    text-align: right;
+}
+
+#wc-braintree-actions .capture-actions .cancel-action {
+    float: left;
+    margin-left: 0px;
+}
+
+#wc-braintree-actions .capture-actions button {
+    float: right;
+    margin-left: 4px;
+}
+
+#wc-braintree-actions .capture-actions {
+    margin-top: 5px;
+    padding-top: 12px;
+    border-top: 1px solid #dfdfdf;
+}
+
+.wc-braintree-paypal-instructions p {
+    margin: 0.5em 0;
+}
+
+.wc-braintree-slider {
+    max-width: 350px;
+    display: block;
+}
+
+.wc-braintree-slider .wc-braintree-slider-val {
+    position: absolute;
+    right: -50px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#order_data .order_data_column .transaction-data {
+
+}
+
+#order_data .order_data_column .transaction-data h3 {
+    margin-bottom: 5px;
+}
+
+#order_data .order_data_column .transaction-data a {
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 18px
+}
+
+#order_data .order_data_column .transaction-data a:before {
+    font-family: WooCommerce;
+    content: "\e010";
+    font-size: 18px;
+    width: 16px;
+}
+
+#order_data .order_data_column .transaction-data .do-transaction-view:hover {
+    border: 2px solid #00a0d2;
+}
+
+.wc-backbone-modal-main article.wc-transaction-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0px;
+}
+
+.wc-transaction-data .wc-transaction-actions {
+    width: 100%;
+}
+
+.wc-transaction-data .wc-transaction-data-row,
+.wc-transaction-data .wc-transaction-general-data,
+.wc-transaction-data .wc-risk-data,
+.wc-transaction-data .wc-transaction-response-data,
+.wc-transaction-data .wc-transaction-payment-data,
+.wc-transaction-data .wc-transaction-paypal-data {
+    width: 50%;
+}
+
+.wc-transaction-data .wc-transaction-data-row strong,
+.wc-transaction-data .wc-risk-data strong,
+.wc-transaction-data .wc-transaction-general-data strong,
+.wc-transaction-data .wc-transaction-response-data strong,
+.wc-transaction-data .wc-transaction-payment-data strong,
+.wc-transaction-data .wc-transaction-paypal-data strong {
+    display: block;
+    margin-top: 1em;
+}
+
+label[for=woocommerce_braintree_paypal_smart_button_demo] {
+    width: 400px;
+}
+
+table.wc-braintree-tokens-table th,
+table.wc-braintree-tokens-table td {
+    padding: 5px;
+}
+
+.wc-braintre-environment-header {
+    font-size: 1.2em;
+}
+
+img.wc-braintree-applepay-button {
+    width: 145px;
+}
+
+img.wc-braintree-applepay-button:nth-of-type(n + 2) {
+    margin-left: 5px;
+}
+
+.wc-braintree-applepay-button-type-desc {
+    margin-bottom: 10px;
+}
+
+.wc-braintree-delete-token {
+    cursor: pointer;
+}
+
+.woocommerce_variation .select2-container {
+    width: 100% !important;
+}
+
+.woocommerce_variation .wc-braintree-shipping label {
+    width: 100%;
+}
+
+#pay-order {
+    min-width: 75px;
+}
+
+#wc-braintree-pay-order-form .form-field .wc-braintree-save-card label {
+    display: block;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+#wc-braintree-pay-order-form .woocommerce-error {
+    background: #b22222;
+    color: #fff;
+    padding: 1em;
+}
+
+#wc-braintree-pay-order-form .row {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+#wc-braintree-pay-order-form .token-container {
+    margin-top: 1em;
+}
+
+#wc-braintree-pay-order-form .form-field label {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#wc-braintree-pay-order-form .braintree-card label {
+    display: block;
+}
+
+/**** Subscriptions ****/
+td.column-status div mark {
+    display: block;
+    text-align: center;
+    padding: 2px 2px;
+    color: #fff;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+    transition: all ease-in 0.3s;
+}
+
+td.column-status mark:hover {
+    box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+    -webkit-box-shadow: 3px 3px 4px 1px rgba(189, 189, 189, 0.5);
+}
+
+td.column-status mark.active {
+    background-color: rgba(82, 162, 82, 0.85);
+}
+
+td.column-status mark.pending {
+    background-color: #ffba00;
+}
+
+td.column-status mark.cancelled {
+    background-color: #afafaf;
+}
+
+td.column-status mark.completed {
+    background: #909fa9;
+    color: #ffffff;
+}
+
+td.column-status mark.failed,
+td.column-status mark.on-hold,
+td.column-status mark.past-due {
+    background-color: #E66F00;
+}
+
+td.column-status mark.expired {
+    background-color: #A0658B
+}
+
+div.wcs_braintree_related_orders p {
+    padding-left: 12px;
+}
+
+div.wcs_braintree_related_orders table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+}
+
+#wcs-braintree-related-orders div.inside {
+    padding: 0px;
+}
+
+div.wcs_braintree_related_orders table th:first-child,
+div.wcs_braintree_related_orders table td:first-child {
+    padding-left: 12px;
+}
+
+div.wcs_braintree_related_orders table th,
+div.wcs_braintree_related_orders table td {
+    text-align: left;
+    padding: 8px;
+}
+
+/***** Subscription End ****/
+
+/*** Data Migration ***/
+.wc-braintre-data-migration {
+    margin: 1em;
+}
+
+.wc-braintre-data-migration .row {
+    margin-bottom: 1em;
+}
+
+.wc-braintre-data-migration .data-option {
+    margin-bottom: 1em;
+}
+
+/*** Data Migration End ***/
+
+@media only screen and (max-width: 1280px) {
+    ._braintree_sandbox_plans_field .select2-container,
+    ._braintree_production_plans_field .select2-container {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    #wc-braintree-fee-tbody td:nth-child(n+2) {
+        padding: 15px 0;
+    }
+}
+
+.woocommerce_braintree_panel table {
+    width: 100%;
+}
+
+.wc-braintree-product-table th {
+    text-align: left;
+}
+
+.wc-braintree-product-gateway-enabled {
+    padding-top: 1px;
+    display: block;
+    outline: 0;
+    box-shadow: none;
+}
+
+.wc-braintree-save-product-data.disabled {
+    opactity: 0.6;
+}
+
+#braintree_product_data span.spinner {
+    float: none;
+    margin: 0;
+}
+
+#woocommerce-product-data ul.wc-tabs li.braintree_options a:before {
+    font-family: WooCommerce;
+    content: '\e01e';
+}
+
+#_braintree_button_position {
+    max-width: 200px;
+}
+
+.wc-braintree-add-style-container {
+    margin-bottom: 10px
+}
+
+.wc-braintree-add-style-container .reset {
+    margin-left: 10px;
+}
+
+.gpay-button-round {
+    border-radius: 50px !important;
+}

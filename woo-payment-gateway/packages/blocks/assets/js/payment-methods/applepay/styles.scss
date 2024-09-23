@@ -1,0 +1,24 @@
+@supports (-webkit-appearance: -apple-pay-button) {
+  .wc-braintree-blocks-apple-pay__button {
+    -webkit-appearance: -apple-pay-button !important;
+    height: 40px;
+    width: 100%;
+
+    &.apple-pay-button-black {
+      -apple-pay-button-style: black;
+    }
+
+    &.apple-pay-button-white {
+      background: white !important;
+      -apple-pay-button-style: white;
+    }
+
+    &.apple-pay-button-white-with-line {
+      -apple-pay-button-style: white-outline;
+    }
+
+    &.apple-pay-button-rounded {
+      border-radius: 50px !important;
+    }
+  }
+}

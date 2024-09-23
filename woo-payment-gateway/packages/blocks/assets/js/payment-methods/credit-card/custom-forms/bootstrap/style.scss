@@ -1,0 +1,96 @@
+$small-width: 375px;
+$medium-width: 475px;
+
+@mixin md-width {
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333333333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+@mixin default-col {
+  .col-md-3,
+  .col-md-6 {
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+
+    > * {
+      margin: 15px 0 0 15px;
+    }
+  }
+
+}
+
+.wc-braintree-blocks-custom__form {
+  &.bootstrap-md {
+    .row {
+      @include default-col;
+    }
+  }
+
+  .row {
+    display: flex;
+    margin: 15px 0 0 -15px;
+    flex-wrap: wrap;
+
+    .form-group {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    .cardnumber-form-group {
+      position: relative;
+
+      .braintree-web-hosted-field {
+        position: relative;
+      }
+
+      .wc-braintree-blocks-current-card__icon {
+        position: absolute;
+        right: 0;
+        max-width: 30px;
+        bottom: 13px;
+        margin-right: 10px;
+      }
+    }
+
+    @include default-col;
+
+    .form-group {
+
+      label {
+        font-weight: 600;
+      }
+
+      .bootstrap-input {
+        height: 45px;
+        border: 1px solid #dadce0;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        padding: 0 10px;
+
+        &:not(.braintree-hosted-fields-invalid) {
+          &.braintree-hosted-fields-valid {
+            border: 1px solid #3c763d !important;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1px rgba(#3c763d, .6)
+          }
+        }
+
+        &.braintree-hosted-fields-invalid {
+          border: 1px solid #8a6d3b !important;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(#8a6d3b, .6) !important;
+        }
+      }
+    }
+
+    @media (min-width: $medium-width) {
+      @include md-width;
+    }
+  }
+}

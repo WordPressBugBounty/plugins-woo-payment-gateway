@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('braintree-web-client', 'braintree-web-data-collector', 'braintree-web-paypal-checkout', 'braintree-web-three-d-secure', 'lodash', 'wc-blocks-checkout', 'wc-blocks-registry', 'wc-price-format', 'wc-settings', 'wp-api-fetch', 'wp-components', 'wp-element', 'wp-i18n', 'wp-plugins', 'wp-polyfill'), 'version' => '0be425582d4947c25adb');

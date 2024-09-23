@@ -1,0 +1,19 @@
+.wc-braintree-blocks-payment-method__container {
+  + .wc-block-components-payment-methods__save-card-info {
+    margin-top: 30px;
+  }
+}
+
+.wc-block-components-express-payment__event-buttons {
+  &.wc-braintree-blocks-express-sm {
+    [id^=express-payment-method-braintree_] {
+      display: block;
+      width: 100%;
+      padding: 0 !important;
+
+      &:nth-child(n + 2) {
+        margin-top: 10px;
+      }
+    }
+  }
+}

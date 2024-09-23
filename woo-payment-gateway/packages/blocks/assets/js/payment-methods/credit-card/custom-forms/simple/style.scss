@@ -1,0 +1,74 @@
+$invalid-color: #ed574a;
+$valid-color: #64d18a;
+
+.wc-braintree-blocks-simple__form {
+  .form-group {
+    width: 100%;
+    margin-bottom: 5px;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+
+    .braintree-web-hosted-field {
+      height: 50px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      display: inline-block;
+      box-shadow: none;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #dddddd;
+      line-height: 20px;
+      background: #fcfcfc;
+      background: linear-gradient(to right, white 50%, #fcfcfc 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 300ms ease-in-out;
+
+      &.braintree-hosted-fields-invalid {
+        border: 1px solid $invalid-color !important;
+      }
+
+      &:not(.braintree-hosted-fields-invalid) {
+        &.braintree-hosted-fields-valid {
+          border: 1px solid $valid-color;
+        }
+
+        &.braintree-hosted-fields-focused {
+          border: 1px solid $valid-color;
+          border-radius: 1px;
+          background-position: left bottom;
+        }
+      }
+
+    }
+
+    .braintree-card-number {
+      .wc-braintree-blocks-current-card__icon {
+        position: absolute;
+        right: 0;
+        max-width: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.wc-braintree-blocks-payment-method__description {
+  + .wc-braintree-card-container {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wpml-config>
+	<admin-texts>
+		<key name="woocommerce_braintree_cc_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_googlepay_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_applepay_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_paypal_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_venmo_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_bancontact_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_eps_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_giropay_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_ideal_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_klarna_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_multibanco_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_p24_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_sepa_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_sofort_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_wechatpay_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+		<key name="woocommerce_braintree_mybank_settings">
+			<key name="title_text" />
+			<key name="description" />
+		</key>
+	</admin-texts>
+</wpml-config>

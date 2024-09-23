@@ -1,0 +1,34 @@
+.wc-braintree-blocks-payment-method__container {
+  .wc-braintree-blocks-gpay-button {
+    .gpay-card-info-container-fill {
+      button {
+        min-width: 100%;
+      }
+    }
+
+    .gpay-button-round {
+      border-radius: 50px !important;
+    }
+
+    .gpay-button-fill-new-style {
+      > .gpay-button {
+        &.checkout {
+          padding: 9px 24px;
+        }
+
+        &.order {
+          padding: 9px 24px;
+        }
+
+        &.pay {
+          padding: 9px 24px;
+        }
+
+        &.subscribe {
+          padding: 9px 24px;
+        }
+      }
+    }
+  }
+}
+
