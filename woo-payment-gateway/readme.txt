@@ -4,8 +4,8 @@ Donate link:
 Tags: braintree, braintree gateway, braintree plugin, braintree payments, payment processing, woocommerce, payment gateway, 3DS, 3D-Secure, 3D Secure, threeDSecure, woocommerce subscriptions, payment gateways, paypal, subscriptions, braintree subscriptions, payment forms, wordpress payments, v.zero, saq a
 Requires at least: 3.0.1
 Requires PHP: 5.6
-Tested up to: 6.6
-Stable tag: 3.2.57
+Tested up to: 6.7
+Stable tag: 3.2.58
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -77,6 +77,9 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.58 - 11/26/24 =
+* Added - Improved security for REST API endpoints
+* Updated - Braintree JS version 3.111.0
 = 3.2.57 - 08/10/24 =
 * Updated - Braintree JS version 3.106.0
 * Updated - Dropin UI version 1.43.0

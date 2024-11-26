@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) || exit();
 
 /**
  *
- * @since 3.0.0
+ * @since   3.0.0
  * @package Braintree/API
  *
  */
@@ -35,6 +35,11 @@ class WC_Braintree_Controller_Client_Token extends WC_Braintree_Controller_Front
 	 * @param WP_REST_Request $request
 	 */
 	public function get_client_token( $request ) {
+		if ( empty( $request['_wpnonce'] ) || ! wp_verify_nonce( $request['_wpnonce'], 'wp_rest' ) ) {
+			return new WP_Error( 'invalid_nonce', __( 'You do not have access to this resource.', 'woo-payment-gateway' ), array(
+				'status' => 403
+			) );
+		}
 		$client_token = $this->generate_client_token( $request['currency'] );
 		if ( is_wp_error( $client_token ) ) {
 			return $client_token;
@@ -63,4 +68,5 @@ class WC_Braintree_Controller_Client_Token extends WC_Braintree_Controller_Front
 			return new WP_Error( 'client-token-error', __( 'Error creating client token.', 'woo-payment-gateway' ), array( 'status' => 400 ) );
 		}
 	}
+
 }
