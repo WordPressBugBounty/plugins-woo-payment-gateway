@@ -5,7 +5,7 @@ Tags: braintree, braintree gateway, braintree plugin, braintree payments, paymen
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 6.7
-Stable tag: 3.2.58
+Stable tag: 3.2.59
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -77,6 +77,8 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.59 - 11/27/24 =
+* Fixed - Rare case where PayPal button doesn't render on checkout page
 = 3.2.58 - 11/26/24 =
 * Added - Improved security for REST API endpoints
 * Updated - Braintree JS version 3.111.0

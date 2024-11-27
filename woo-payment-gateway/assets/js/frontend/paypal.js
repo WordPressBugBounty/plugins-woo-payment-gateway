@@ -31,7 +31,7 @@ PayPal.prototype.initialize = function () {
  *
  */
 PayPal.prototype.create_instance = function () {
-    return loadScript(this.params.query_params).then(paypal => {
+    this.paypalScriptPromise = loadScript(this.params.query_params).then(paypal => {
         return wc_braintree.PayPal.prototype.create_instance.apply(this, arguments).then(function () {
             if (this.banner_enabled && $(this.banner_container).length) {
                 $('.wc-braintree-paypal-top-container').remove();
@@ -66,7 +66,9 @@ PayPal.prototype.create_instance = function () {
         }.bind(this));
     }).catch(error => {
         console.log(error);
-    })
+    });
+
+    return this.paypalScriptPromise;
 }
 
 /**
@@ -194,7 +196,11 @@ PayPal.prototype.updated_checkout = function (e, data) {
             });
         }
     }
-    wc_braintree.CheckoutGateway.prototype.updated_checkout.call(this);
+    if (this.paypalScriptPromise) {
+        this.paypalScriptPromise.then(() => {
+            wc_braintree.CheckoutGateway.prototype.updated_checkout.call(this);
+        });
+    }
 }
 
 wc_braintree.register(PayPal);
