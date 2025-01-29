@@ -100,12 +100,14 @@ class Util
      */
     public static function throwGraphQLResponseException($response)
     {
+        // phpcs:ignore
         if (!array_key_exists("errors", $response) || !($errors = $response["errors"])) {
             return;
         }
 
         foreach ($errors as $error) {
             $message = $error["message"];
+            // phpcs:ignore
             if (!array_key_exists("extensions", $error)) {
                 return;
             }
@@ -354,10 +356,11 @@ class Util
      * @param array  $array     associative array to implode
      * @param string $separator (optional, defaults to =)
      * @param string $glue      (optional, defaults to ', ')
+     * @param string $parens    parentheses to enclose nested arrays (optional, defaults to '[]')
      *
      * @return string|false
      */
-    public static function implodeAssociativeArray($array, $separator = '=', $glue = ', ')
+    public static function implodeAssociativeArray($array, $separator = '=', $glue = ', ', $parens = '[]')
     {
         // build a new array with joined keys and values
         $tmpArray = null;
@@ -365,7 +368,12 @@ class Util
             if ($value instanceof DateTime) {
                 $value = $value->format('r');
             }
-            $tmpArray[] = $key . $separator . $value;
+            if (is_array($value)) {
+                $nested_value = self::implodeAssociativeArray($value);
+                $tmpArray[] = $key . $separator . $parens[0] . $nested_value . $parens[1];
+            } else {
+                $tmpArray[] = $key . $separator . $value;
+            }
         }
         // implode and return the new array
         return (is_array($tmpArray)) ? implode($glue, $tmpArray) : false;
@@ -378,12 +386,15 @@ class Util
      *
      * @return string|false
      */
-    public static function attributesToString($attributes)
+    public static function attributesToString($attributes, $preserveIndexedArray = false)
     {
+        if ($preserveIndexedArray && self::isIndexedArray($attributes)) {
+            return '[' . implode(',', $attributes) . ']';
+        }
         $printableAttribs = [];
         foreach ($attributes as $key => $value) {
             if (is_array($value)) {
-                $pAttrib = self::attributesToString($value);
+                $pAttrib = self::attributesToString($value, $preserveIndexedArray);
             } elseif ($value instanceof DateTime) {
                 $pAttrib = $value->format(DateTime::RFC850);
             } else {
@@ -392,6 +403,11 @@ class Util
             $printableAttribs[$key] = sprintf('%s', $pAttrib);
         }
         return self::implodeAssociativeArray($printableAttribs);
+    }
+
+    private static function isIndexedArray($array)
+    {
+        return array_keys($array) == range(0, count($array) - 1);
     }
 
     /**
@@ -432,6 +448,7 @@ class Util
      */
     public static function replaceKey($array, $oldKey, $newKey)
     {
+        // phpcs:ignore
         if (array_key_exists($oldKey, $array)) {
             $array[$newKey] = $array[$oldKey];
             unset($array[$oldKey]);

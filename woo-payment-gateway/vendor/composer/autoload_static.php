@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb96e0000e05e043e7298a732652be17f
+class ComposerStaticInit745116ccb8ee9f57be21a8811275e116
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
@@ -56,6 +56,7 @@ class ComposerStaticInitb96e0000e05e043e7298a732652be17f
         'Braintree\\AuthorizationAdjustment' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/AuthorizationAdjustment.php',
         'Braintree\\Base' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Base.php',
         'Braintree\\BinData' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/BinData.php',
+        'Braintree\\BlikAlias' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/BlikAlias.php',
         'Braintree\\ClientToken' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/ClientToken.php',
         'Braintree\\ClientTokenGateway' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php',
         'Braintree\\Collection' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Collection.php',
@@ -71,6 +72,7 @@ class ComposerStaticInitb96e0000e05e043e7298a732652be17f
         'Braintree\\Customer' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Customer.php',
         'Braintree\\CustomerGateway' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/CustomerGateway.php',
         'Braintree\\CustomerSearch' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/CustomerSearch.php',
+        'Braintree\\CustomerSessionGateway' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/CustomerSessionGateway.php',
         'Braintree\\Descriptor' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Descriptor.php',
         'Braintree\\Digest' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Digest.php',
         'Braintree\\Disbursement' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Disbursement.php',
@@ -125,6 +127,21 @@ class ComposerStaticInitb96e0000e05e043e7298a732652be17f
         'Braintree\\GrantedPaymentInstrumentUpdate' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GrantedPaymentInstrumentUpdate.php',
         'Braintree\\GraphQL' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL.php',
         'Braintree\\GraphQLClient' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQLClient.php',
+        'Braintree\\GraphQL\\Enums\\Recommendations' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Enums/Recommendations.php',
+        'Braintree\\GraphQL\\Enums\\RecommendedPaymentOption' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Enums/RecommendedPaymentOption.php',
+        'Braintree\\GraphQL\\Inputs\\CreateCustomerSessionInput' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/CreateCustomerSessionInput.php',
+        'Braintree\\GraphQL\\Inputs\\CreateCustomerSessionInputBuilder' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/CreateCustomerSessionInputBuilder.php',
+        'Braintree\\GraphQL\\Inputs\\CustomerRecommendationsInput' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/CustomerRecommendationsInput.php',
+        'Braintree\\GraphQL\\Inputs\\CustomerRecommendationsInputBuilder' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/CustomerRecommendationsInputBuilder.php',
+        'Braintree\\GraphQL\\Inputs\\CustomerSessionInput' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/CustomerSessionInput.php',
+        'Braintree\\GraphQL\\Inputs\\CustomerSessionInputBuilder' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/CustomerSessionInputBuilder.php',
+        'Braintree\\GraphQL\\Inputs\\PhoneInput' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/PhoneInput.php',
+        'Braintree\\GraphQL\\Inputs\\PhoneInputBuilder' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/PhoneInputBuilder.php',
+        'Braintree\\GraphQL\\Inputs\\UpdateCustomerSessionInput' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/UpdateCustomerSessionInput.php',
+        'Braintree\\GraphQL\\Inputs\\UpdateCustomerSessionInputBuilder' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Inputs/UpdateCustomerSessionInputBuilder.php',
+        'Braintree\\GraphQL\\Types\\CustomerRecommendationsPayload' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Types/CustomerRecommendationsPayload.php',
+        'Braintree\\GraphQL\\Types\\PaymentOptions' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Types/PaymentOptions.php',
+        'Braintree\\GraphQL\\Unions\\CustomerRecommendations' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/GraphQL/Unions/CustomerRecommendations.php',
         'Braintree\\Http' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Http.php',
         'Braintree\\HttpHelpers\\Curl' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/HttpHelpers/Curl.php',
         'Braintree\\HttpHelpers\\CurlRequest' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/HttpHelpers/CurlRequest.php',
@@ -145,6 +162,8 @@ class ComposerStaticInitb96e0000e05e043e7298a732652be17f
         'Braintree\\MerchantAccount\\FundingDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MerchantAccount/FundingDetails.php',
         'Braintree\\MerchantAccount\\IndividualDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MerchantAccount/IndividualDetails.php',
         'Braintree\\MerchantGateway' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MerchantGateway.php',
+        'Braintree\\MetaCheckoutCard' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MetaCheckoutCard.php',
+        'Braintree\\MetaCheckoutToken' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MetaCheckoutToken.php',
         'Braintree\\Modification' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Modification.php',
         'Braintree\\MonetaryAmount' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MonetaryAmount.php',
         'Braintree\\MultipleValueNode' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/MultipleValueNode.php',
@@ -210,6 +229,9 @@ class ComposerStaticInitb96e0000e05e043e7298a732652be17f
         'Braintree\\Transaction\\CustomerDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/CustomerDetails.php',
         'Braintree\\Transaction\\GooglePayCardDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/GooglePayCardDetails.php',
         'Braintree\\Transaction\\LocalPaymentDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/LocalPaymentDetails.php',
+        'Braintree\\Transaction\\MetaCheckoutCardDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/MetaCheckoutCardDetails.php',
+        'Braintree\\Transaction\\MetaCheckoutTokenDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/MetaCheckoutTokenDetails.php',
+        'Braintree\\Transaction\\PackageDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/PackageDetails.php',
         'Braintree\\Transaction\\PayPalDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/PayPalDetails.php',
         'Braintree\\Transaction\\PayPalHereDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/PayPalHereDetails.php',
         'Braintree\\Transaction\\SamsungPayCardDetails' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Transaction/SamsungPayCardDetails.php',
@@ -274,9 +296,9 @@ class ComposerStaticInitb96e0000e05e043e7298a732652be17f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb96e0000e05e043e7298a732652be17f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb96e0000e05e043e7298a732652be17f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitb96e0000e05e043e7298a732652be17f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit745116ccb8ee9f57be21a8811275e116::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit745116ccb8ee9f57be21a8811275e116::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit745116ccb8ee9f57be21a8811275e116::$classMap;
 
         }, null, ClassLoader::class);
     }
