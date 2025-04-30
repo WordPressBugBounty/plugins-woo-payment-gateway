@@ -91,4 +91,11 @@ class AbstractGateway extends AbstractPaymentMethodType {
 		return $option;
 	}
 
+	public function enqueue_checkout_scripts() {
+	}
+
+	public function get_schema_extended_data( $data ) {
+		return $data;
+	}
+
 }

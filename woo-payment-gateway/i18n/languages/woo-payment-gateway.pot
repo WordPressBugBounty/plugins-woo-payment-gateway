@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Payment Plugins Braintree For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.60\n"
+"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.70\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-payment-gateway\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-29T21:44:34+00:00\n"
+"POT-Creation-Date: 2025-04-30T20:55:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: woo-payment-gateway\n"
@@ -67,7 +67,7 @@ msgid "Payment Method Token"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:451
-#: includes/class-braintree.php:434
+#: includes/class-braintree.php:436
 #: includes/wc-braintree-functions.php:1545
 msgid "Error creating client token. Exception: %1$s"
 msgstr ""
@@ -81,7 +81,7 @@ msgid "Error processing payment for order %1$s. Exception: %2$s. Transaction arg
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:538
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:239
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:244
 msgid "There was an error processing your payment. Reason: %1$s"
 msgstr ""
 
@@ -610,7 +610,7 @@ msgid "Admins can process customer orders over the phone using this functionalit
 msgstr ""
 
 #: includes/admin/meta-boxes/views/html-order-pay.php:47
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:389
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:394
 #: templates/dropin-form.php:25
 msgid "Save Card"
 msgstr ""
@@ -674,8 +674,8 @@ msgid "Fraud Checks"
 msgstr ""
 
 #: includes/admin/meta-boxes/views/html-order-transaction-view.php:50
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:378
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:379
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:383
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:384
 msgid "CVV"
 msgstr ""
 
@@ -1556,7 +1556,7 @@ msgstr ""
 msgid "We noticed you have <b>WooCommerce PayPal Powered by Braintree Gateway</b> active. Please deactivate to prevent conflicts with <b>Braintree For WooCommerce</b>."
 msgstr ""
 
-#: includes/class-braintree.php:516
+#: includes/class-braintree.php:518
 msgid "Use of bt_manager has been deprecated. Please use function braintree() instead."
 msgstr ""
 
@@ -1580,7 +1580,7 @@ msgstr ""
 msgid "Your payment method has been updated."
 msgstr ""
 
-#: includes/class-wc-braintree-frontend-scripts.php:275
+#: includes/class-wc-braintree-frontend-scripts.php:286
 msgid "Not matches found"
 msgstr ""
 
@@ -1697,48 +1697,48 @@ msgstr ""
 msgid "Credit card gateway that integrates with your Braintree account"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:292
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:297
 msgid "Your payment method could not be processed at this time. Reason: 3D Secure not accepted or validation failed."
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:354
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:355
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:359
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:360
 msgid "Card Number"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:360
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:365
 msgid "Exp Date"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:361
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:366
 #: templates/custom-forms/classic-form.php:19
 msgid "MM / YY"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:366
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:371
 msgid "Exp Month"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:367
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:372
 msgid "MM"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:372
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:377
 msgid "Exp Year"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:373
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:378
 msgid "YY"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:384
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:385
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:389
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:390
 #: templates/custom-forms/classic-form.php:35
 #: templates/custom-forms/simple-form.php:27
 msgid "Postal Code"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:390
+#: includes/gateways/class-wc-braintree-cc-payment-gateway.php:395
 msgid "Street Address"
 msgstr ""
 
@@ -2449,6 +2449,60 @@ msgstr ""
 
 #: includes/gateways/settings/cc-settings.php:344
 msgid "Conditional statements allow you to control when 3D Secure is available on the checkout page. <a href=\"https://docs.paymentplugins.com/wc-braintree/config/#/conditional_stmnts\" target=\"_blank\"> Conditional statements explained</a>"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:349
+msgid "Fastlane by PayPal"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:352
+msgid "Fastlane Enabled"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:356
+msgid "Available for US based merchants. When enabled, Fastlane by PayPal will be available on the checkout page. To enable in your Braintree dashboard login to Braintree > Settings > Account Settings > Customer Checkout."
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:359
+msgid "Fastlane Type"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:363
+msgid "Express Checkout Button"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:364
+msgid "Email Detection"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:367
+msgid ""
+"If the express checkout option is enabled, a Fastlane express button will be available. The email recognition option will use dynamic\n"
+"\t\t\t\temail detection to render the Fastlane payment flow."
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:372
+msgid "Fastlane Signup Link"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:376
+msgid "If enabled, a signup button will be visible above the credit card form on the checkout page so customers can signup for Fastlane."
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:382
+msgid "Authenticate On Page Load"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:386
+msgid "If enabled and the billing email is populated, the plugin will attempt to authenticate the user when the checkout page loads."
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:389
+msgid "Email At Top"
+msgstr ""
+
+#: includes/gateways/settings/cc-settings.php:393
+msgid "When enabled, the email field appears at the top of the checkout page. This setting only applies when using the checkout shortcode on your site."
 msgstr ""
 
 #: includes/gateways/settings/googlepay-settings.php:9
@@ -5418,6 +5472,10 @@ msgstr ""
 
 #: templates/custom-forms/card-shape-form.php:9
 msgid "Payment Details"
+msgstr ""
+
+#: templates/fastlane/signup-link.php:7
+msgid "Sign up for"
 msgstr ""
 
 #: templates/loaders/processing-plain.php:8

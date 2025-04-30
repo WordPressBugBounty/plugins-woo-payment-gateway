@@ -1,11 +1,13 @@
 <?php
 /**
- * @version 3.2.5
- * @package Braintree/Templates
  * @var WC_Braintree_CC_Payment_Gateway $gateway
+ * @package Braintree/Templates
+ * @version 3.2.5
  */
 wc_braintree_hidden_field( $gateway->_3ds_nonce_key, 'wc-braintree-3ds-vaulted-nonce' );
 wc_braintree_hidden_field( $gateway->config_key );
+
+do_action( 'wc_braintree_before_card_container', $gateway );
 ?>
 <div class="wc-braintree-cc-container <?php echo $gateway->get_option( 'icon_style' ) ?>-icons">
 	<?php

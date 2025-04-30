@@ -261,6 +261,7 @@ class ComposerStaticInit745116ccb8ee9f57be21a8811275e116
         'Braintree\\Xml\\Parser' => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree/Xml/Parser.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'PaymentPlugins\\Braintree\\Assets\\AssetsApi' => __DIR__ . '/../..' . '/src/Assets/AssetsApi.php',
+        'PaymentPlugins\\Braintree\\Fastlane\\FastlaneController' => __DIR__ . '/../..' . '/src/Fastlane/FastlaneController.php',
         'PaymentPlugins\\Braintree\\Utilities\\FeaturesUtil' => __DIR__ . '/../..' . '/src/Utilities/FeaturesUtil.php',
         'PaymentPlugins\\Braintree\\WooFunnels\\AssetsApi' => __DIR__ . '/../..' . '/packages/woofunnels/src/AssetsApi.php',
         'PaymentPlugins\\Braintree\\WooFunnels\\Package' => __DIR__ . '/../..' . '/packages/woofunnels/src/Package.php',
@@ -283,14 +284,17 @@ class ComposerStaticInit745116ccb8ee9f57be21a8811275e116
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Assets\\Api' => __DIR__ . '/../..' . '/packages/blocks/src/Assets/Api.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\BraintreeClient' => __DIR__ . '/../..' . '/packages/blocks/src/BraintreeClient.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Config' => __DIR__ . '/../..' . '/packages/blocks/src/Config.php',
+        'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\FrontendScripts' => __DIR__ . '/../..' . '/packages/blocks/src/FrontendScripts.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Package' => __DIR__ . '/../..' . '/packages/blocks/src/Package.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Api' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Api.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\AbstractGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/AbstractGateway.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\ApplePayGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/ApplePayGateway.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\CreditCardGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/CreditCardGateway.php',
+        'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\FastlaneGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/FastlaneGateway.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\GooglePayGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/GooglePayGateway.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\PayPalGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/PayPalGateway.php',
         'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\Payments\\Gateways\\VenmoGateway' => __DIR__ . '/../..' . '/packages/blocks/src/Payments/Gateways/VenmoGateway.php',
+        'PaymentPlugins\\WooCommerce\\Blocks\\Braintree\\SchemaController' => __DIR__ . '/../..' . '/packages/blocks/src/SchemaController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

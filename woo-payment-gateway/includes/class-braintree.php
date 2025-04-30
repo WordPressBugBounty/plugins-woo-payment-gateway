@@ -17,9 +17,9 @@ class WC_Braintree_Manager {
 	 *
 	 * @var string
 	 */
-	public $version = '3.2.60';
+	public $version = '3.2.70';
 
-	public $js_sdk_version = '3.106.0';
+	public $js_sdk_version = '3.117.1';
 
 	public static $instance;
 
@@ -409,6 +409,8 @@ class WC_Braintree_Manager {
 		);
 
 		$this->WC_BRAINTREE_SPAM_COUNT = 0;
+
+		( new \PaymentPlugins\Braintree\Fastlane\FastlaneController() )->initialize();
 	}
 
 	/**

@@ -19,7 +19,8 @@
                 'focus': 'braintree_field_focus',
                 'blur': 'braintree_field_blur',
                 'inputSubmitRequest': 'braintree_card_input_submit_request'
-            }
+            },
+            is_fastlane: false
         })
 
     /**
@@ -275,6 +276,10 @@
         if (payment_gateway === this.gateway_id) {
             this.show_place_order();
         }
+    }
+
+    CreditCard.prototype.set_is_fastlane = function (value) {
+        this.is_fastlane = value;
     }
 
     wc_braintree.register(CreditCard);

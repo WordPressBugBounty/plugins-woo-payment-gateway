@@ -10,6 +10,7 @@ use PaymentPlugins\WooCommerce\Blocks\Braintree\BraintreeClient;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Package;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\ApplePayGateway;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\CreditCardGateway;
+use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\FastlaneGateway;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\GooglePayGateway;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\PayPalGateway;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\VenmoGateway;
@@ -43,6 +44,7 @@ class Api {
 		add_action( 'woocommerce_blocks_checkout_enqueue_data', [ $this, 'add_checkout_data' ] );
 		add_action( 'woocommerce_blocks_cart_enqueue_data', [ $this, 'add_cart_data' ] );
 		add_filter( 'woocommerce_saved_payment_methods_list', [ $this, 'transform_payment_method_type' ], 100 );
+		add_filter( 'wc_braintree_blocks_get_extended_data', [ $this, 'get_schema_extended_data' ] );
 	}
 
 	public function unregister_scripts() {
@@ -56,6 +58,11 @@ class Api {
 		$this->register( $registry, $container->get( PayPalGateway::class ) );
 		$this->register( $registry, $container->get( ApplePayGateway::class ) );
 		$this->register( $registry, $container->get( VenmoGateway::class ) );
+		$this->register( $registry, $container->get( FastlaneGateway::class ) );
+	}
+
+	public function get_payment_methods() {
+		return $this->payment_gateways;
 	}
 
 	private function register( $registry, $instance ) {
@@ -110,6 +117,16 @@ class Api {
 		}
 
 		return $list;
+	}
+
+	public function get_schema_extended_data( $data ) {
+		foreach ( $this->payment_gateways as $gateway ) {
+			if ( method_exists( $gateway, 'get_schema_extended_data' ) ) {
+				$data = $gateway->get_schema_extended_data( $data );
+			}
+		}
+
+		return $data;
 	}
 
 }

@@ -47,6 +47,12 @@
             wc_braintree_checkout_fields = [];
         }
 
+        wc_braintree.get_payment_method = function (id) {
+            return this.gateways.find(function (gateway) {
+                return gateway.gateway_id === id
+            });
+        }
+
         /**
          * BaseGateway class that all gateways should extend.
          *
@@ -2451,7 +2457,11 @@
         }
 
         wc_braintree.ApplePay.prototype.can_initialize_applepay = function () {
-            return window.ApplePaySession && ApplePaySession.canMakePayments();
+            try {
+                return window.ApplePaySession && ApplePaySession.canMakePayments()
+            } catch (error) {
+                return false;
+            }
         }
 
         wc_braintree.ApplePay.prototype.has_nonce = function () {

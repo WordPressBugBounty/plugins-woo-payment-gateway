@@ -17,7 +17,7 @@ class CreditCardGateway extends AbstractGateway {
 		if ( $this->is_custom_form_enabled() ) {
 			$form = $this->get_custom_form_name();
 			if ( \in_array( $form, [ 'bootstrap', 'simple' ] ) ) {
-				wp_enqueue_style( 'wc-braintree-blocks-credit-card-styles', $this->assets_api->assets_url( "build/credit-card/{$form}.css" ), [], $this->assets_api->version() );
+				wp_register_style( 'wc-braintree-blocks-credit-card-styles', $this->assets_api->assets_url( "build/credit-card/{$form}.css" ), [], $this->assets_api->version() );
 				wp_style_add_data( 'wc-braintree-blocks-credit-card-styles', 'rtl', 'replace' );
 			}
 		}
@@ -26,13 +26,39 @@ class CreditCardGateway extends AbstractGateway {
 	}
 
 	public function get_payment_method_data() {
+		$token = new \WC_Payment_Token_Braintree_CC();
+		$token->set_format( $this->get_setting( 'method_format', 'type_ending_in' ) );
+		$base_url        = \plugins_url( 'assets/images/payment-methods/', WC_PLUGIN_FILE );
+		$email_detection = $this->get_setting( 'fastlane_flow' ) === 'email_detection';
+		$show_signup     = $email_detection && \wc_string_to_bool( $this->get_setting( 'fastlane_signup', 'yes' ) );
+
 		return parent::get_payment_method_data() + [
 				'dropinEnabled'       => ! $this->is_custom_form_enabled(),
 				'vaultedThreeDSecure' => $this->is_vaulted_three_d_secure_active(),
 				'customForm'          => $this->get_setting( 'custom_form_design', 'bootstrap_form' ),
 				'hostedFieldsOptions' => $this->get_hosted_fields_options(),
 				'hostedFieldsStyles'  => $this->get_setting( 'custom_form_styles' ),
-				'icons'               => $this->get_payment_method_icons()
+				'icons'               => $this->get_payment_method_icons(),
+				'payment_format'      => $token->get_formats()[ $token->get_format() ]['format'],
+				'i18n'                => [
+					'email_empty'     => __( 'Please provide an email address before using Fastlane.', 'woo-payment-gateway' ),
+					'email_invalid'   => __( 'Please enter a valid email address before using Fastlane.', 'woo-payment-gateway' ),
+					'continue'        => __( 'Continue', 'woo-payment-gateway' ),
+					'cancel'          => __( 'Cancel', 'woo-payment-gateway' ),
+					'change'          => __( 'Change', 'woo-payment-gateway' ),
+					'fastlane_signup' => __( 'Sign up for', 'woo-payment-gateway' )
+				],
+				'fastlane_icons'      => [
+					'amex'       => $base_url . 'amex.svg',
+					'diners'     => $base_url . 'diners.svg',
+					'discover'   => $base_url . 'discover.svg',
+					'jcb'        => $base_url . 'jcb.svg',
+					'maestro'    => $base_url . 'maestro.svg',
+					'mastercard' => $base_url . 'mastercard.svg',
+					'visa'       => $base_url . 'visa.svg'
+				],
+				'showSignup'          => $show_signup,
+				'fastLaneLogo'        => braintree()->assets_path() . 'img/fastlane.svg'
 			];
 	}
 
@@ -125,6 +151,14 @@ class CreditCardGateway extends AbstractGateway {
 				'placeholder' => __( 'Postal Code', 'woo-payment-gateway' )
 			]
 		];
+	}
+
+	public function enqueue_checkout_scripts() {
+		if ( $this->is_custom_form_enabled() ) {
+			if ( wp_style_is( 'wc-braintree-blocks-credit-card-styles', 'registered' ) ) {
+				wp_enqueue_style( 'wc-braintree-blocks-credit-card-styles' );
+			}
+		}
 	}
 
 }

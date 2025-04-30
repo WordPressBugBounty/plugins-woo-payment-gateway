@@ -1,11 +1,11 @@
 === Payment Plugins Braintree For WooCommerce ===
 Contributors: mr.clayton
 Donate link: 
-Tags: braintree, braintree gateway, braintree plugin, braintree payments, payment processing, woocommerce, payment gateway, 3DS, 3D-Secure, 3D Secure, threeDSecure, woocommerce subscriptions, payment gateways, paypal, subscriptions, braintree subscriptions, payment forms, wordpress payments, v.zero, saq a
+Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocommerce
 Requires at least: 3.0.1
 Requires PHP: 5.6
-Tested up to: 6.7
-Stable tag: 3.2.60
+Tested up to: 6.8
+Stable tag: 3.2.70
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,7 @@ Braintree for WooCommerce is made to supercharge your conversion rate by decreas
 Offer PayPal, Google Pay, Apple Pay on product pages, cart pages, and at the top of your checkout page.
 
 = Features =
+- Fastlane Checkout
 - Google Pay
 - Apple Pay
 - PayPal, PayPal Pay Later, PayPal Credit
@@ -77,6 +78,11 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.70 - 4/30/25 =
+* Added - Fastlane integration. Settings are located on the Credit Card Settings page. To enable fastlane in your Braintree account, login to your Braintree dashboard
+and click the settings icon in the upper right hand corner > Account Settings > Customer Checkout.
+* Updated - Don't enqueue block based styles on non block pages
+* Updated - Braintree JS version to 3.117.1
 = 3.2.60 - 01/29/25 =
 * Updated - Braintree PHP SDK version to 6.23.0
 = 3.2.59 - 11/27/24 =

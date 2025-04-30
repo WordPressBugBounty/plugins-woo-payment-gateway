@@ -4,6 +4,8 @@
 namespace PaymentPlugins\WooCommerce\Blocks\Braintree;
 
 use Automattic\WooCommerce\Blocks\Assets\AssetDataRegistry;
+use Automattic\WooCommerce\StoreApi\Schemas\ExtendSchema;
+use Automattic\WooCommerce\StoreApi\StoreApi;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Assets\Api as AssetsApi;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Api as PaymentsApi;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\ApplePayGateway;
@@ -11,9 +13,11 @@ use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\CreditCardGate
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\GooglePayGateway;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\PayPalGateway;
 use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\VenmoGateway;
+use PaymentPlugins\WooCommerce\Blocks\Braintree\Payments\Gateways\FastlaneGateway;
 
 /**
  * Class Config
+ *
  * @package PaymentPlugins\WooCommerce\Blocks\Braintree
  */
 class Config {
@@ -32,9 +36,9 @@ class Config {
 	 * Config constructor.
 	 *
 	 * @param \Automattic\WooCommerce\Blocks\Registry\Container $container
-	 * @param string $js_sdk_version
-	 * @param string $version
-	 * @param string $path
+	 * @param string                                            $js_sdk_version
+	 * @param string                                            $version
+	 * @param string                                            $path
 	 */
 	public function __construct( \Automattic\WooCommerce\Blocks\Registry\Container $container, string $js_sdk_version, string $version, string $path ) {
 		$this->container   = $container;
@@ -48,6 +52,7 @@ class Config {
 
 	private function initialize() {
 		$this->container->get( PaymentsApi::class );
+		$this->container->get( SchemaController::class )->initialize();
 	}
 
 	public function get_version() {
@@ -64,6 +69,7 @@ class Config {
 
 	/**
 	 * Returns the current version of the Braintree JS SDK.
+	 *
 	 * @return string
 	 */
 	public function get_sdk_version() {
@@ -84,6 +90,9 @@ class Config {
 				$container->get( AssetDataRegistry::class ),
 				$container->get( BraintreeClient::class ) );
 		} );
+		$this->container->register( SchemaController::class, function () {
+			return new SchemaController( StoreApi::container()->get( ExtendSchema::class ) );
+		} );
 	}
 
 	private function register_payment_gateways() {
@@ -102,5 +111,9 @@ class Config {
 		$this->container->register( VenmoGateway::class, function ( $container ) {
 			return new VenmoGateway( $container->get( AssetsApi::class ) );
 		} );
+		$this->container->register( FastlaneGateway::class, function ( $container ) {
+			return new FastlaneGateway( $container->get( AssetsApi::class ) );
+		} );
 	}
+
 }

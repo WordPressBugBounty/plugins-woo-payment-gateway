@@ -4,6 +4,8 @@
 namespace PaymentPlugins\WooCommerce\Blocks\Braintree;
 
 
+use PaymentPlugins\WooCommerce\Blocks\Braintree\Assets\Api as AssetsApi;
+
 class Package {
 
 	public static function init() {
@@ -13,6 +15,7 @@ class Package {
 	public static function initialize() {
 		if ( self::enabled() ) {
 			self::container()->get( Config::class );
+			self::container()->get( FrontendScripts::class )->initialize();
 		}
 	}
 
@@ -47,6 +50,12 @@ class Package {
 			$container = \Automattic\WooCommerce\Blocks\Package::container();
 			$container->register( Config::class, function ( $container ) {
 				return new Config( $container, braintree()->js_sdk_version, braintree()->version, dirname( __FILE__ ) );
+			} );
+			$container->register( FrontendScripts::class, function ( $container ) {
+				return new FrontendScripts(
+					$container->get( AssetsApi::class ),
+					$container->get( Config::class )
+				);
 			} );
 		}
 

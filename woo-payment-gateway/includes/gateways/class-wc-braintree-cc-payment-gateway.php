@@ -41,6 +41,11 @@ class WC_Braintree_CC_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 		parent::add_hooks();
 	}
 
+	public function set_supports() {
+		parent::set_supports();
+		$this->supports[] = 'wc_braintree_banner_checkout';
+	}
+
 	public function get_icon() {
 		$methods         = $this->get_option( 'payment_methods' );
 		$form_fields     = $this->get_form_fields();
@@ -456,6 +461,19 @@ class WC_Braintree_CC_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 			case 'checkout':
 				return wp_script_is( $scripts->get_handle( 'hosted-fields' ) ) || wp_script_is( $scripts->get_handle( 'dropin-v3' ) );
 		}
+	}
+
+	public function banner_checkout_enabled() {
+		return $this->is_fastlane_enabled()
+		       && $this->get_option( 'fastlane_flow' ) === 'express_button';
+	}
+
+	public function banner_fields() {
+		wc_braintree_get_template( 'fastlane/express-checkout.php' );
+	}
+
+	public function is_fastlane_enabled() {
+		return wc_string_to_bool( $this->get_option( 'fastlane_enabled', 'no' ) );
 	}
 
 }

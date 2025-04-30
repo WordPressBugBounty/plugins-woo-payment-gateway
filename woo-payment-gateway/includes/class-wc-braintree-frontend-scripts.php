@@ -43,6 +43,7 @@ class WC_Braintree_Frontend_Scripts {
 		'applepay-v3'        => 'https://js.braintreegateway.com/web/%1$s/js/apple-pay.min.js',
 		'venmo-v3'           => 'https://js.braintreegateway.com/web/%1$s/js/venmo.min.js',
 		'local-payment-v3'   => 'https://js.braintreegateway.com/web/%1$s/js/local-payment.min.js',
+		'fastlane'           => 'https://js.braintreegateway.com/web/%1$s/js/fastlane.min.js'
 	);
 
 	public $prefix = 'wc-braintree-';
@@ -123,6 +124,16 @@ class WC_Braintree_Frontend_Scripts {
 			$this->get_handle( 'data-collector-v3' ),
 			$this->get_handle( 'paypal-checkout-v3' )
 		) );
+
+		$this->assets_api->register_script( 'wc-braintree-fastlane-checkout', 'assets/build/fastlane-checkout.js', array(
+			'wc-braintree-vendors',
+			$this->get_handle( 'client-manager' ),
+			$this->get_handle( 'data-collector-v3' ),
+			$this->get_handle( 'paypal-checkout-v3' ),
+			$this->get_handle( 'fastlane' )
+		) );
+
+		$this->assets_api->register_style( 'wc-braintree-fastlane-checkout', 'assets/build/fastlane.css' );
 
 		$this->scripts_registered = true;
 	}

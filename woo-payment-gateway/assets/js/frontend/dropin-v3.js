@@ -15,7 +15,8 @@
         wc_braintree.CheckoutGateway.prototype, {
             params: wc_braintree_dropin_v3_params,
             dropin_id: '#wc-braintree-dropin-form',
-            interval_set: false
+            interval_set: false,
+            is_fastlane: false
         });
 
     /**
@@ -78,9 +79,12 @@
     CreditCard.prototype.process = function (e) {
         if (this.is_gateway_selected()) {
             if (!this.is_payment_method_selected()) {
-                e.preventDefault();
                 if (this.validate_checkout_fields()) {
                     this.fields.fromFormToFields();
+                    if (this.payment_method_received) {
+                        return true;
+                    }
+                    e.preventDefault();
                     this.tokenize();
                 } else {
                     return false;
@@ -172,6 +176,10 @@
     CreditCard.prototype.teardown_3ds = function () {
         this.dropinInstance.clearSelectedPaymentMethod();
         wc_braintree.CreditCard.prototype.teardown_3ds.apply(this, arguments);
+    }
+
+    CreditCard.prototype.set_is_fastlane = function (value) {
+        this.is_fastlane = value;
     }
 
     wc_braintree.register(CreditCard);
