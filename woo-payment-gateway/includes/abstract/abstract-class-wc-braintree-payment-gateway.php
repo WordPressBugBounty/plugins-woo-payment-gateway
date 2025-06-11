@@ -2352,7 +2352,7 @@ abstract class WC_Braintree_Payment_Gateway extends WC_Payment_Gateway {
 				 *
 				 * @var WC_Shipping_Rate $method
 				 */
-				$amount    = $incl_tax ? $method->cost + $method->get_shipping_tax() : $method->cost;
+				$amount    = $incl_tax ? (float) $method->cost + (float) $method->get_shipping_tax() : (float) $method->cost;
 				$selected  = isset( $chosen_shipping_methods[ $i ] ) && $chosen_shipping_methods[ $i ] === $method->id;
 				$methods[] = $this->get_formatted_shipping_method( $method, $i, $selected, $amount, $decimals );
 			}

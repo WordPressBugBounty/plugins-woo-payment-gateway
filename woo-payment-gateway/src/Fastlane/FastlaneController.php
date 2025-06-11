@@ -90,7 +90,7 @@ class FastlaneController {
 	public function render_before_card_container( $gateway ) {
 		if ( $gateway->is_fastlane_enabled() && $gateway->get_option( 'fastlane_flow' ) === 'email_detection' ) {
 			$show_signup = \wc_string_to_bool( $gateway->get_option( 'fastlane_signup', 'yes' ) );
-			if ( $show_signup ) {
+			if ( $show_signup && ! is_add_payment_method_page() && ! is_checkout_pay_page() ) {
 				wc_braintree_get_template( 'fastlane/signup-link.php' );
 			}
 		}

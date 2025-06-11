@@ -5,7 +5,7 @@ Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocom
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 6.8
-Stable tag: 3.2.70
+Stable tag: 3.2.71
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +78,9 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.71 -06/11/25 =
+* Added - WC 9.3.3 compatibility
+* Fixed - Only show the Fastlane signup link on the checkout page.
 = 3.2.70 - 4/30/25 =
 * Added - Fastlane integration. Settings are located on the Credit Card Settings page. To enable fastlane in your Braintree account, login to your Braintree dashboard
 and click the settings icon in the upper right hand corner > Account Settings > Customer Checkout.
