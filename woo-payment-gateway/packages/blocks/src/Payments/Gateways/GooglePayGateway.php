@@ -23,7 +23,10 @@ class GooglePayGateway extends AbstractGateway {
 				'googleEnvironment'      => wc_braintree_production_active() ? 'PRODUCTION' : 'TEST',
 				'buttonOptions'          => $this->get_payment_button_options(),
 				'totalPriceLabel'        => __( 'Total', 'woocommerce' ),
-				'buttonShape'            => $this->get_setting( 'button_shape', 'rect' )
+				'buttonShape'            => $this->get_setting( 'button_shape', 'rect' ),
+				'editor'                 => [
+					'icon' => $this->assets_api->assets_url( 'assets/img/gpay_button_buy_black.svg' )
+				]
 			];
 	}
 

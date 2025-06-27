@@ -20,6 +20,7 @@ class FrontendScripts {
 		add_action( 'init', [ $this, 'register_scripts' ] );
 		add_action( 'woocommerce_blocks_enqueue_checkout_block_scripts_before', [ $this, 'enqueue_checkout_scripts' ] );
 		add_action( 'woocommerce_blocks_enqueue_cart_block_scripts_before', [ $this, 'enqueue_cart_scripts' ] );
+		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_scripts' ] );
 	}
 
 	public function register_scripts() {
@@ -67,6 +68,21 @@ class FrontendScripts {
 			'braintree-web-local-payment'   => 'https://js.braintreegateway.com/web/%1$s/js/local-payment.min.js',
 			'braintree-web-fastlane'        => 'https://js.braintreegateway.com/web/%1$s/js/fastlane.min.js'
 		];
+	}
+
+	public function enqueue_admin_scripts() {
+		$id = get_queried_object_id();
+		if ( \is_int( $id ) && class_exists( '\WC_Blocks_Utils' ) ) {
+			if ( \WC_Blocks_Utils::has_block_in_page( $id, 'woocommerce/checkout' ) ) {
+				$payments_api = Package::container()->get( PaymentsApi::class );
+				foreach ( $payments_api->get_payment_methods() as $payment_method ) {
+					if ( method_exists( $payment_method, 'enqueue_checkout_scripts' ) ) {
+						$payment_method->enqueue_checkout_scripts();
+					}
+				}
+				wp_enqueue_style( 'wc-braintree-blocks-style' );
+			}
+		}
 	}
 
 }

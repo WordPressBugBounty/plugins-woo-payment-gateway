@@ -279,7 +279,7 @@ return array(
 		'title'       => __( '3D Secure Settings', 'woo-payment-gateway' ),
 		'description' => __(
 			'<a href="https://articles.braintreepayments.com/guides/fraud-tools/3d-secure#processing" target="_blank">Learn more about 3D Secure processing in 
-						our support article.</a><p><a target="_blank" href="https://developers.braintreepayments.com/guides/3d-secure/testing-go-live/php#testing">3DS testing guide</a></p>',
+						our support article.</a><p><a target="_blank" href="https://developer.paypal.com/braintree/docs/guides/3d-secure/testing/php/">3DS testing guide</a></p>',
 			'woo-payment-gateway'
 		),
 	),

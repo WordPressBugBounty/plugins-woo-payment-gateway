@@ -33,7 +33,10 @@ class PayPalGateway extends AbstractGateway {
 				'paylaterTxtColor'       => $this->get_setting( 'pay_later_txt_color' ),
 				'payLaterMsgCurrencies'  => [ 'USD', 'GBP', 'EUR' ],
 				'expressCartEnabled'     => in_array( 'cart', $this->get_payment_sections() ),
-				'expressCheckoutEnabled' => in_array( 'checkout_banner', $this->get_payment_sections() )
+				'expressCheckoutEnabled' => in_array( 'checkout_banner', $this->get_payment_sections() ),
+				'editor'                 => [
+					'icon' => $this->assets_api->assets_url( 'assets/img/paypal.svg' )
+				]
 			];
 	}
 

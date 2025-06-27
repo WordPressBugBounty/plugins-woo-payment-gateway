@@ -32,7 +32,7 @@ class WC_Braintree_Frontend_Scripts {
 
 	public $global_scripts = array(
 		'hosted-fields-v3'   => 'https://js.braintreegateway.com/web/%1$s/js/hosted-fields.min.js',
-		'dropin-v3-ext'      => 'https://js.braintreegateway.com/web/dropin/1.43.0/js/dropin.min.js',
+		'dropin-v3-ext'      => 'https://js.braintreegateway.com/web/dropin/1.44.1/js/dropin.min.js',
 		'client-v3'          => 'https://js.braintreegateway.com/web/%1$s/js/client.min.js',
 		'data-collector-v3'  => 'https://js.braintreegateway.com/web/%1$s/js/data-collector.min.js',
 		'3ds-v3'             => 'https://js.braintreegateway.com/web/%1$s/js/three-d-secure.min.js',

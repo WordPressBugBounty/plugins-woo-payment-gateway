@@ -5,7 +5,7 @@ Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocom
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 6.8
-Stable tag: 3.2.71
+Stable tag: 3.2.73
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,7 +78,14 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
-= 3.2.71 -06/11/25 =
+= 3.2.73 - 06/27/25 =
+* Fixed - Added missing images for block editor preview page
+= 3.2.72 - 06/27/25 =
+* Fixed - On checkout and cart block editor page, display preview of payment methods correctly.
+* Fixed - JS error on checkout block caused by dropin form
+* Updated - Braintree JS version to 3.123.1
+* Updated - Dropin UI version 1.44.1
+= 3.2.71 - 06/11/25 =
 * Added - WC 9.3.3 compatibility
 * Fixed - Only show the Fastlane signup link on the checkout page.
 = 3.2.70 - 4/30/25 =

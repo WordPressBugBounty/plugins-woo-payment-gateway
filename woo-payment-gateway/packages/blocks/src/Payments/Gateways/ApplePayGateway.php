@@ -21,7 +21,10 @@ class ApplePayGateway extends AbstractGateway {
 				'buttonType'             => $this->get_setting( 'button_type_checkout' ),
 				'roundedButton'          => $this->get_setting( 'button_style', 'standard' ) === 'rounded',
 				'expressCartEnabled'     => in_array( 'cart', $this->get_payment_sections() ),
-				'expressCheckoutEnabled' => in_array( 'checkout_banner', $this->get_payment_sections() )
+				'expressCheckoutEnabled' => in_array( 'checkout_banner', $this->get_payment_sections() ),
+				'editor'                 => [
+					'icon' => $this->assets_api->assets_url( 'assets/img/apple_pay_button_black.svg' )
+				]
 			];
 	}
 
