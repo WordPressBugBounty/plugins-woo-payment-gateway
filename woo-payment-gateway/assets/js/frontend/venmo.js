@@ -43,7 +43,8 @@
         this.initialize_fraud_tools();
         braintree.venmo.create({
             client: this.clientInstance,
-            allowNewBrowserTab: false
+            allowNewBrowserTab: true,
+            allowDesktop: true
         }, function (err, venmoInstance) {
             if (err) {
                 this.submit_error(err);
