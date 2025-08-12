@@ -18,7 +18,7 @@ class Api {
 	public function __construct( $plugin_version, $js_sdk_version, AssetsApi $assets ) {
 		$this->js_sdk_version = $js_sdk_version;
 		$this->assets         = $assets;
-		add_action( 'init', [ $this, 'load_gateways' ] );
+		//add_action( 'init', [ $this, 'load_gateways' ] );
 		add_filter( 'wfocu_wc_get_supported_gateways', [ $this, 'get_supported_gateways' ] );
 		add_filter( 'wfocu_subscriptions_get_supported_gateways', [ $this, 'add_supported_subscription_gateways' ] );
 		add_filter( 'wc_braintree_order_transaction_args', [ $this, 'maybe_force_tokenization' ], 10, 3 );

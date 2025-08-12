@@ -16,18 +16,18 @@ class BasePaymentGateway extends \WFOCU_Gateway {
 
 	private $payment_method_nonce;
 
+	/**
+	 * @var \PaymentPlugins\Braintree\WooFunnels\Upsell\Payments\Gateways\BasePaymentGateway
+	 */
+	private static $_instance;
+
 	public function __construct( Client $client, \WFOCU_Logger $logger ) {
 		$this->client = $client;
 		$this->logger = $logger;
 	}
 
 	public static function get_instance() {
-		static $instance;
-		if ( ! $instance ) {
-			$instance = new static( new Client(), WFOCU_Core()->log );
-		}
-
-		return $instance;
+		return new static( new Client(), WFOCU_Core()->log );
 	}
 
 	public function has_token( $order ) {
