@@ -5,7 +5,7 @@ Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocom
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 6.8
-Stable tag: 3.2.75
+Stable tag: 3.2.76
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +78,10 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.76 - 08/26/25 =
+* Fixed - Incompatibility notice that was showing on block editor. The Braintree plugin has supported the cart and checkout block for several years.
+* Fixed - Undefined variable $style in apply-pay.php template when Apple Pay used in a mini-cart
+* Updated - WC tested up to 10.1
 =  3.2.75 - 08/12/25 =
 * Fixed - FunnelKit upsell was not triggering when PayPal was selected as a payment method
 = 3.2.74 - 07/03/25 =

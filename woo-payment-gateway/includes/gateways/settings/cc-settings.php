@@ -356,16 +356,17 @@ return array(
 		'description' => __( 'Available for US based merchants. When enabled, Fastlane by PayPal will be available on the checkout page. To enable in your Braintree dashboard login to Braintree > Settings > Account Settings > Customer Checkout.', 'woo-payment-gateway' )
 	),
 	'fastlane_flow'             => array(
-		'title'       => __( 'Fastlane Type', 'woo-payment-gateway' ),
-		'type'        => 'select',
-		'default'     => 'email_detection',
-		'options'     => array(
+		'title'             => __( 'Fastlane Type', 'woo-payment-gateway' ),
+		'type'              => 'select',
+		'default'           => 'email_detection',
+		'options'           => array(
 			'express_button'  => __( 'Express Checkout Button', 'woo-payment-gateway' ),
 			'email_detection' => __( 'Email Detection', 'woo-payment-gateway' )
 		),
-		'value'       => 'yes',
-		'description' => __( 'If the express checkout option is enabled, a Fastlane express button will be available. The email recognition option will use dynamic
-				email detection to render the Fastlane payment flow.', 'woo-payment-gateway' )
+		'value'             => 'yes',
+		'description'       => __( 'If the express checkout option is enabled, a Fastlane express button will be available. The email recognition option will use dynamic
+				email detection to render the Fastlane payment flow.', 'woo-payment-gateway' ),
+		'custom_attributes' => array( 'data-show-if' => array( 'fastlane_enabled' => true ) ),
 
 	),
 	'fastlane_signup'           => array(
@@ -375,21 +376,23 @@ return array(
 		'value'             => 'yes',
 		'description'       => __( 'If enabled, a signup button will be visible above the credit card form on the checkout page so customers can signup for Fastlane.', 'woo-payment-gateway' ),
 		'custom_attributes' => array(
-			'data-show-if' => array( 'fastlane_flow' => 'email_detection' )
+			'data-show-if' => array( 'fastlane_enabled' => true, 'fastlane_flow' => 'email_detection' )
 		),
 	),
 	'fastlane_pageload'         => array(
-		'title'       => __( 'Authenticate On Page Load', 'woo-payment-gateway' ),
-		'type'        => 'checkbox',
-		'default'     => 'no',
-		'value'       => 'yes',
-		'description' => __( 'If enabled and the billing email is populated, the plugin will attempt to authenticate the user when the checkout page loads.', 'woo-payment-gateway' )
+		'title'             => __( 'Authenticate On Page Load', 'woo-payment-gateway' ),
+		'type'              => 'checkbox',
+		'default'           => 'no',
+		'value'             => 'yes',
+		'description'       => __( 'If enabled and the billing email is populated, the plugin will attempt to authenticate the user when the checkout page loads.', 'woo-payment-gateway' ),
+		'custom_attributes' => array( 'data-show-if' => array( 'fastlane_enabled' => true ) ),
 	),
 	'fastlane_email_top'        => array(
-		'title'       => __( 'Email At Top', 'woo-payment-gateway' ),
-		'type'        => 'checkbox',
-		'default'     => 'yes',
-		'value'       => 'yes',
-		'description' => __( 'When enabled, the email field appears at the top of the checkout page. This setting only applies when using the checkout shortcode on your site.', 'woo-payment-gateway' )
+		'title'             => __( 'Email At Top', 'woo-payment-gateway' ),
+		'type'              => 'checkbox',
+		'default'           => 'yes',
+		'value'             => 'yes',
+		'description'       => __( 'When enabled, the email field appears at the top of the checkout page. This setting only applies when using the checkout shortcode on your site.', 'woo-payment-gateway' ),
+		'custom_attributes' => array( 'data-show-if' => array( 'fastlane_enabled' => true ) ),
 	)
 );

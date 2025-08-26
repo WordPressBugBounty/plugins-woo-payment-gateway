@@ -23,7 +23,8 @@ class CreditCardGateway extends AbstractGateway {
 		$token->set_format( $this->get_setting( 'method_format', 'type_ending_in' ) );
 		$base_url        = \plugins_url( 'assets/images/payment-methods/', WC_PLUGIN_FILE );
 		$email_detection = $this->get_setting( 'fastlane_flow' ) === 'email_detection';
-		$show_signup     = $email_detection && \wc_string_to_bool( $this->get_setting( 'fastlane_signup', 'yes' ) );
+		$show_signup     = $email_detection && \wc_string_to_bool( $this->get_setting( 'fastlane_enabled', 'yes' ) )
+		                   && \wc_string_to_bool( $this->get_setting( 'fastlane_signup', 'yes' ) );
 
 		return parent::get_payment_method_data() + [
 				'dropinEnabled'       => ! $this->is_custom_form_enabled(),

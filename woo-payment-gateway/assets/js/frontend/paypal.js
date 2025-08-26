@@ -36,8 +36,10 @@ PayPal.prototype.create_instance = function () {
             if (this.banner_enabled && $(this.banner_container).length) {
                 $('.wc-braintree-paypal-top-container').remove();
                 $(this.banner_container).prepend('<div class="wc-braintree-paypal-top-container"></div>');
-                var render_options = this.render_options();
-                paypal.Buttons($.extend({}, this.render_options(paypal.FUNDING.PAYPAL), {
+                this.processingBannerCheckout = true;
+                var render_options = this.render_options(paypal.FUNDING.PAYPAL);
+                this.processingBannerCheckout = false;
+                paypal.Buttons($.extend({}, render_options, {
                     onInit: function () {
 
                     }.bind(this),

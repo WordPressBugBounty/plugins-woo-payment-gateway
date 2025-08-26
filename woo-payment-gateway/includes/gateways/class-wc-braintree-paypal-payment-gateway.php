@@ -498,13 +498,15 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 			}, WC()->cart->get_fees() ) );
 		}
 
+		$cart = WC()->cart;
+
 		$totals     = array(
-			'item_total' => wc_format_decimal( $incl_tax ? WC()->cart->subtotal + WC()->cart->fee_total + get_fee_tax() : WC()->cart->subtotal_ex_tax + WC()->cart->fee_total, $decimals ),
-			'shipping'   => wc_format_decimal( $incl_tax ? WC()->cart->shipping_total + WC()->cart->shipping_tax_total : WC()->cart->shipping_total, $decimals ),
-			'tax_total'  => wc_format_decimal( $incl_tax ? 0 : WC()->cart->get_taxes_total(), $decimals ),
-			'discount'   => wc_format_decimal( $incl_tax ? WC()->cart->discount_cart + WC()->cart->discount_cart_tax : WC()->cart->discount_cart, $decimals )
+			'item_total' => (float) wc_format_decimal( $incl_tax ? $cart->get_subtotal() + $cart->get_fee_total() + $cart->get_fee_tax() : $cart->get_subtotal() + $cart->get_fee_total(), $decimals ),
+			'shipping'   => (float) wc_format_decimal( $incl_tax ? $cart->get_shipping_total() + $cart->get_shipping_tax() : $cart->get_shipping_total(), $decimals ),
+			'tax_total'  => (float) wc_format_decimal( $incl_tax ? 0 : $cart->get_taxes_total(), $decimals ),
+			'discount'   => (float) wc_format_decimal( $incl_tax ? $cart->get_discount_total() + $cart->get_discount_tax() : $cart->get_discount_total(), $decimals )
 		);
-		$cart_total = wc_format_decimal( WC()->cart->total, $decimals );
+		$cart_total = (float) wc_format_decimal( $cart->get_total( 'edit' ), $decimals );
 
 		$response = array(
 			'patch' => array(
@@ -554,8 +556,9 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 		);
 
 		// if breakdown doesn't match amount, don't include it.
-		$breakdown_total = array_sum( $totals );
-		if ( $breakdown_total != $cart_total ) {
+		$breakdown_total = (float) wc_format_decimal( array_sum( $totals ), $decimals );
+		
+		if ( $breakdown_total !== $cart_total ) {
 			unset( $response['patch'][0]['value']['breakdown'] );
 		}
 

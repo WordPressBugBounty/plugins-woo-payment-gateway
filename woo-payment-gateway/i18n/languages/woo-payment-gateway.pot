@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Payment Plugins Braintree For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.75\n"
+"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.76\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-payment-gateway\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-12T14:54:09+00:00\n"
+"POT-Creation-Date: 2025-08-26T21:01:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: woo-payment-gateway\n"
@@ -1851,23 +1851,23 @@ msgstr ""
 msgid "Admin Notice: For virtual products, PayPal must send back the billing address. Click %1$shere%2$s to read how to enable this functionality."
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:660
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:663
 msgid "Display type"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:665
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:668
 msgid "Inline"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:666
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:669
 msgid "Vertical"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:669
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:672
 msgid "This option determines if the PayPal button and Credit button are side by side or vertical."
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:672
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:675
 msgid "Enable Pay Later Msg"
 msgstr ""
 
@@ -2481,27 +2481,27 @@ msgid ""
 "\t\t\t\temail detection to render the Fastlane payment flow."
 msgstr ""
 
-#: includes/gateways/settings/cc-settings.php:372
+#: includes/gateways/settings/cc-settings.php:373
 msgid "Fastlane Signup Link"
 msgstr ""
 
-#: includes/gateways/settings/cc-settings.php:376
+#: includes/gateways/settings/cc-settings.php:377
 msgid "If enabled, a signup button will be visible above the credit card form on the checkout page so customers can signup for Fastlane."
 msgstr ""
 
-#: includes/gateways/settings/cc-settings.php:382
+#: includes/gateways/settings/cc-settings.php:383
 msgid "Authenticate On Page Load"
 msgstr ""
 
-#: includes/gateways/settings/cc-settings.php:386
+#: includes/gateways/settings/cc-settings.php:387
 msgid "If enabled and the billing email is populated, the plugin will attempt to authenticate the user when the checkout page loads."
 msgstr ""
 
-#: includes/gateways/settings/cc-settings.php:389
+#: includes/gateways/settings/cc-settings.php:391
 msgid "Email At Top"
 msgstr ""
 
-#: includes/gateways/settings/cc-settings.php:393
+#: includes/gateways/settings/cc-settings.php:395
 msgid "When enabled, the email field appears at the top of the checkout page. This setting only applies when using the checkout shortcode on your site."
 msgstr ""
 
