@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  *
- * @since 3.0.0
+ * @since   3.0.0
  * @package Braintree/Admin
  *
  */
@@ -34,7 +34,7 @@ class WC_Meta_Box_Braintree_Subscription_Data {
 			wp_enqueue_style( 'wc-braintree-admin-style' );
 			wp_enqueue_script( 'wc-braintree-subscription-product-data', $js_path . 'admin/meta-boxes-product.js', array(
 				'jquery',
-				'jquery-blockui'
+				wc_braintree_get_script_handle( 'jquery-blockui' )
 			), braintree()->version, true );
 			wp_localize_script(
 				'wc-braintree-subscription-product-data',
@@ -121,8 +121,8 @@ class WC_Meta_Box_Braintree_Subscription_Data {
 
 	/**
 	 *
-	 * @param int $loop
-	 * @param array $variation_data
+	 * @param int     $loop
+	 * @param array   $variation_data
 	 * @param WP_Post $variation
 	 */
 	public static function output_variation_data( $loop, $variation_data, $variation ) {
@@ -241,6 +241,7 @@ class WC_Meta_Box_Braintree_Subscription_Data {
 
 		return $products;
 	}
+
 }
 
 WC_Meta_Box_Braintree_Subscription_Data::init();

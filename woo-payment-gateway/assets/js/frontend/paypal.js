@@ -31,7 +31,10 @@ PayPal.prototype.initialize = function () {
  *
  */
 PayPal.prototype.create_instance = function () {
-    this.paypalScriptPromise = loadScript(this.params.query_params).then(paypal => {
+    this.paypalScriptPromise = loadScript({
+        ...this.params.query_params,
+        dataPartnerAttributionId: 'PaymentPlugins_BT'
+    }).then(paypal => {
         return wc_braintree.PayPal.prototype.create_instance.apply(this, arguments).then(function () {
             if (this.banner_enabled && $(this.banner_container).length) {
                 $('.wc-braintree-paypal-top-container').remove();
@@ -164,7 +167,7 @@ PayPal.prototype.scroll_to_place_order = function () {
 }
 
 PayPal.prototype.handle_terms_click = function () {
-    if ($('[name="terms"]').length) {
+    if ($('[name="terms"]').filter(':visible').length) {
         var checked = $('[name="terms"]').is(':checked');
         if (checked) {
             this.actions.enable();
@@ -193,7 +196,10 @@ PayPal.prototype.updated_checkout = function (e, data) {
         this.params.query_params = {...this.params.query_params, ...data.fragments.paypal_query_args};
         this.params.options = {...this.params.options, ...data.fragments.paypal_options};
         if (oldValues !== newValues) {
-            return loadScript(this.params.query_params).then(() => {
+            return loadScript({
+                ...this.params.query_params,
+                dataPartnerAttributionId: 'PaymentPlugins_BT'
+            }).then(() => {
                 wc_braintree.CheckoutGateway.prototype.updated_checkout.call(this);
             });
         }

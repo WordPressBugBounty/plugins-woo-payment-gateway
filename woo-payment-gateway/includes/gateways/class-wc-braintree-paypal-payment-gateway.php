@@ -54,7 +54,10 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	public function add_hooks() {
 		parent::add_hooks();
 		add_filter( 'woocommerce_payment_methods_list_item', array( $this, 'payment_methods_list_item' ), 10, 2 );
-		add_filter( 'wc_braintree_after_checkout_validation_notice', array( $this, 'after_checkout_validation_notice' ), 10, 2 );
+		add_filter( 'wc_braintree_after_checkout_validation_notice', array(
+			$this,
+			'after_checkout_validation_notice'
+		), 10, 2 );
 		add_filter( 'wc_braintree_mini_cart_deps', array( $this, 'get_mini_cart_dependencies' ), 10, 2 );
 		add_filter( 'script_loader_tag', array( $this, 'add_partner_attribution_id' ), 10, 3 );
 		add_filter( 'woocommerce_update_order_review_fragments', array( $this, 'update_order_review_fragments' ) );
@@ -79,7 +82,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 
 	/**
 	 *
-	 * @param array            $item
+	 * @param array $item
 	 * @param WC_Payment_Token $payment_token
 	 */
 	public function payment_methods_list_item( $item, $payment_token ) {
@@ -118,7 +121,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 			$scripts->assets_url( 'js/frontend/paypal-cart.js' ),
 			array(
 				$scripts->get_handle( 'client-manager' ),
-				$scripts->get_handle( 'paypal-checkout' ),
+				$scripts->get_handle( 'paypal-external' ),
 				$scripts->get_handle( 'data-collector-v3' ),
 				$scripts->get_handle( 'paypal-checkout-v3' ),
 			)
@@ -139,7 +142,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 			$scripts->assets_url( 'js/frontend/paypal-product.js' ),
 			array(
 				$scripts->get_handle( 'client-manager' ),
-				$scripts->get_handle( 'paypal-checkout' ),
+				$scripts->get_handle( 'paypal-external' ),
 				$scripts->get_handle( 'data-collector-v3' ),
 				$scripts->get_handle( 'paypal-checkout-v3' ),
 			)
@@ -230,7 +233,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 		);
 
 		/**
-		 * @param array                        $options
+		 * @param array $options
 		 * @param WC_Braintree_Payment_Gateway $this
 		 *
 		 * @since 3.2.4
@@ -247,8 +250,8 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	/**
-	 * @since 3.2.8
 	 * @return bool
+	 * @since 3.2.8
 	 */
 	public function is_bnpl_active() {
 		return $this->is_active( 'bnpl_enabled' );
@@ -327,7 +330,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	 * Method that adds to the validation notice when the selected payment method is PayPal.
 	 *
 	 * @param string $notice
-	 * @param array  $data
+	 * @param array $data
 	 */
 	public function after_checkout_validation_notice( $notice, $data ) {
 		if ( $this->id === $data['payment_method'] ) {
@@ -423,17 +426,17 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	private function register_paypal_script( $scripts ) {
 		if ( $scripts->client_token ) {
 			// If flow is vault and script has already been enqueued, then skip. Vault always takes precedence.
-			if ( wp_script_is( $scripts->get_handle( 'paypal-checkout' ), 'registered' ) ) {
+			if ( wp_script_is( $scripts->get_handle( 'paypal-external' ), 'registered' ) ) {
 				if ( $this->paypal_flow === \PaymentPlugins\WC_Braintree_Constants::PAYPAL_VAULT ) {
 					return;
 				} else {
 					// de-register so the latest script will be used.
-					wp_deregister_script( $scripts->get_handle( 'paypal-checkout' ) );
+					wp_deregister_script( $scripts->get_handle( 'paypal-external' ) );
 				}
 			}
 			$query_args = $this->get_paypal_script_query_args();
 
-			wp_register_script( $scripts->get_handle( 'paypal-checkout' ), add_query_arg( $query_args, 'https://www.paypal.com/sdk/js' ), array(), null, true );
+			wp_register_script( $scripts->get_handle( 'paypal-external' ), add_query_arg( $query_args, 'https://www.paypal.com/sdk/js' ), array(), null, true );
 		} else {
 			static $retries = 0;
 			if ( $retries < 1 ) {
@@ -478,7 +481,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	/**
-	 * @param array           $data
+	 * @param array $data
 	 * @param WP_REST_Request $request
 	 *
 	 * @return array
@@ -557,7 +560,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 
 		// if breakdown doesn't match amount, don't include it.
 		$breakdown_total = (float) wc_format_decimal( array_sum( $totals ), $decimals );
-		
+
 		if ( $breakdown_total !== $cart_total ) {
 			unset( $response['patch'][0]['value']['breakdown'] );
 		}
@@ -569,10 +572,10 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 
 	/**
 	 * @param WC_Shipping_Rate $method
-	 * @param int              $index
-	 * @param bool             $selected
-	 * @param float            $amount
-	 * @param int              $decimals
+	 * @param int $index
+	 * @param bool $selected
+	 * @param float $amount
+	 * @param int $decimals
 	 *
 	 * @return array
 	 */
@@ -593,13 +596,13 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	/**
-	 * @param array                         $deps
+	 * @param array $deps
 	 * @param WC_Braintree_Frontend_Scripts $scripts
 	 */
 	public function get_mini_cart_dependencies( $deps, $scripts ) {
 		if ( $this->mini_cart_enabled() ) {
 			$this->register_paypal_script( $scripts );
-			$deps[] = $scripts->get_handle( 'paypal-checkout' );
+			$deps[] = $scripts->get_handle( 'paypal-external' );
 			$deps[] = $scripts->get_handle( 'paypal-checkout-v3' );
 		}
 
@@ -607,7 +610,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	public function add_partner_attribution_id( $tag, $handle, $src ) {
-		if ( 'wc-braintree-paypal-checkout' === $handle ) {
+		if ( 'wc-braintree-paypal-external' === $handle ) {
 			$tag = str_replace( 'src', 'data-partner-attribution-id="' . braintree()->partner_code . '" src', $tag );
 		}
 
@@ -615,16 +618,16 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	/**
-	 * @since 3.2.7
 	 * @return array
+	 * @since 3.2.7
 	 */
 	private function get_pay_later_sections() {
 		return $this->get_option( 'pay_later_msg' );
 	}
 
 	/**
-	 * @since 3.2.7
 	 * @return array
+	 * @since 3.2.7
 	 */
 	private function get_credit_sections() {
 		return $this->get_option( 'bnpl_sections' );
@@ -633,8 +636,8 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 
 	/**
 	 *
-	 * @since 3.2.7
 	 * @return bool
+	 * @since 3.2.7
 	 */
 	private function can_show_bnpl_msg() {
 		// Can't show Pay Later messaging if the merchant is not selling in USD or sells subscription products.

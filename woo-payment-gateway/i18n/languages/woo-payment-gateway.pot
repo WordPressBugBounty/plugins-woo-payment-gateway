@@ -2,44 +2,51 @@
 # This file is distributed under the same license as the Payment Plugins Braintree For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.76\n"
+"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.81\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-payment-gateway\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-26T21:01:02+00:00\n"
+"POT-Creation-Date: 2025-12-19T21:48:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: woo-payment-gateway\n"
 
 #. Plugin Name of the plugin
+#: braintree-payments.php
 msgid "Payment Plugins Braintree For WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
+#: braintree-payments.php
 msgid "https://docs.paymentplugins.com/wc-braintree/config"
 msgstr ""
 
 #. Description of the plugin
+#: braintree-payments.php
 msgid "Official partner of Braintree & PayPal. Accept Credit Cards, PayPal, Google Pay, Apple Pay, Venmo, and Local Payments."
 msgstr ""
 
 #. Author of the plugin
+#: braintree-payments.php
 msgid "Payment Plugins, support@paymentplugins.com"
 msgstr ""
 
 #: braintree-payments.php:18
+#, php-format
 msgid "Your PHP version is %s but Braintree For WooCommerce requires version 5.6+."
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-local-payment-gateway.php:147
+#, php-format
 msgid "%1$s is available when store currency is %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-local-payment-gateway.php:154
+#, php-format
 msgid " and billing country is %s"
 msgstr ""
 
@@ -54,11 +61,13 @@ msgid "Saved Cards"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:248
+#, php-format
 msgid "Error setting up %1$s. Reason: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:278
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:282
+#, php-format
 msgid "Braintree payment token %1$s not deleted in Braintree gateway. Reason: %2$s"
 msgstr ""
 
@@ -69,27 +78,33 @@ msgstr ""
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:451
 #: includes/class-braintree.php:436
 #: includes/wc-braintree-functions.php:1545
+#, php-format
 msgid "Error creating client token. Exception: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:499
+#, php-format
 msgid "Processing payment for order %1$s. Transaction args: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:532
+#, php-format
 msgid "Error processing payment for order %1$s. Exception: %2$s. Transaction args: %3$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:538
 #: includes/gateways/class-wc-braintree-cc-payment-gateway.php:244
+#, php-format
 msgid "There was an error processing your payment. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:539
+#, php-format
 msgid "Error processing payment. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:569
+#, php-format
 msgid "Order %1$s in Braintree: Transaction ID: %2$s. Payment method: %3$s"
 msgstr ""
 
@@ -102,14 +117,17 @@ msgid "authorized"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:896
+#, php-format
 msgid "Error processing refund. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:899
+#, php-format
 msgid "The transaction ID for order %1$s is blank. A refund cannot be processed unless there is a valid transaction associated with the order."
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:909
+#, php-format
 msgid "Refund successful in Braintree. Amount: %1$s. Refund ID: %2$s"
 msgstr ""
 
@@ -118,28 +136,34 @@ msgid "If you wish to cancel the transaction you can set the order's status to c
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:933
+#, php-format
 msgid "Exception thrown while issuing refund. Reason: %1$s Exception class: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:959
+#, php-format
 msgid "Transaction submitted for settlement in Braintree. Amount %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:971
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:975
+#, php-format
 msgid "There was an error capturing the charge. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:993
+#, php-format
 msgid "Transaction %1$s has been voided in Braintree."
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:998
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1002
+#, php-format
 msgid "There was an error voiding the transaction. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1071
+#, php-format
 msgid ""
 "Error deleting payment method address. This error was caught gracefully\n"
 "\t\t\t\t\t\t\t\tand not shown to the customer. You can delete address %1$s in your Braintree gateway."
@@ -148,6 +172,7 @@ msgstr ""
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1088
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1094
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1099
+#, php-format
 msgid "There was an error saving your payment method. Reason: %1$s"
 msgstr ""
 
@@ -159,35 +184,43 @@ msgstr ""
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1283
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1289
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1291
+#, php-format
 msgid "Error processing subscription. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1413
+#, php-format
 msgid "Processing recurring payment for order %1$s. Transaction args: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1425
+#, php-format
 msgid "Recurring payment charged successfully in Braintree. Transaction ID: %1$s. Payment method: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1429
+#, php-format
 msgid "Payment method %s is the customer's default payment method in Braintree. It was used for the recurring payment because the subscription's _payment_method_token key is blank and would have caused a failed renewal. Please correct your postmeta."
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1434
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1440
+#, php-format
 msgid "Error processing recurring payment. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1443
+#, php-format
 msgid "Error processing subscription %1$s. Reason: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1446
+#, php-format
 msgid "Error processing recurring payment. Exception: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1448
+#, php-format
 msgid "Error processing subscription %1$s. Exception thrown: %2$s"
 msgstr ""
 
@@ -198,27 +231,33 @@ msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1530
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1535
+#, php-format
 msgid "Error cancelling subscription. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1567
+#, php-format
 msgid "Payment method changed. New payment method: %1$s. Old Payment method: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1570
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1576
+#, php-format
 msgid "Error updating payment method. Reason: %1$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1574
+#, php-format
 msgid "Error updating payment method for subscription %1$s. Reason: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1831
+#, php-format
 msgid "Fee - %s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1862
+#, php-format
 msgid "Coupon - %s"
 msgstr ""
 
@@ -228,20 +267,24 @@ msgid "Discount"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:1899
+#, php-format
 msgid "Discount for order %s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:2114
+#, php-format
 msgid "Pre order payment processed. Transaction ID: %1$s. Payment method: %2$s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:2117
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:2122
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:2125
+#, php-format
 msgid "Error processing pre order payment. Reason: %s"
 msgstr ""
 
 #: includes/abstract/abstract-class-wc-braintree-payment-gateway.php:2206
+#, php-format
 msgid "Increase your conversion rate by offering %1$s on your Product and Cart pages, or at the top of the Checkout page. <br/><strong>Note:</strong> you can control which products display this button by going to the product edit page."
 msgstr ""
 
@@ -413,7 +456,7 @@ msgid "Via"
 msgstr ""
 
 #: includes/admin/class-wc-braintree-admin-list-table-subscriptions.php:85
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:90
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:93
 #: includes/gateways/class-wc-braintree-venmo-payment-gateway.php:74
 msgid "N/A"
 msgstr ""
@@ -457,6 +500,7 @@ msgstr ""
 
 #: includes/admin/class-wc-braintree-admin-user-edit.php:97
 #: includes/admin/class-wc-braintree-admin-user-edit.php:99
+#, php-format
 msgid "Error saving customer's payment methods on User Profile page. Reason: %1$s"
 msgstr ""
 
@@ -465,6 +509,7 @@ msgid "Braintree Settings"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-braintree-meta-box-product-data.php:95
+#, php-format
 msgid "%s Settings"
 msgstr ""
 
@@ -492,10 +537,12 @@ msgid "Related Subscriptions"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-braintree-meta-box-subscription-order-data.php:217
+#, php-format
 msgid "Product %1$s cannot be assigned to this subscription. Reason: the products do not have the same billing schedule."
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-braintree-subscription-data.php:49
+#, php-format
 msgid "There is already a plan assigned for currency %currency%."
 msgstr ""
 
@@ -774,6 +821,7 @@ msgstr ""
 
 #: includes/admin/meta-boxes/views/html-product-data-general.php:29
 #: includes/admin/meta-boxes/views/html-product-data-variations.php:39
+#, php-format
 msgid "Subscription Price (%s)"
 msgstr ""
 
@@ -961,6 +1009,7 @@ msgid "Webhook URL"
 msgstr ""
 
 #: includes/admin/settings/api-settings.php:86
+#, php-format
 msgid "This is the URL that Braintree uses to send notifications such as when a local payment is processed. You must add this URL to your Braintree control panel when using local payment methods. %1$sWebhook guide%2$s"
 msgstr ""
 
@@ -1176,14 +1225,17 @@ msgid "Add Sandbox Account"
 msgstr ""
 
 #: includes/admin/settings/class-wc-braintree-merchant-account-settings.php:135
+#, php-format
 msgid "Merchant account error: <b>%1$s</b> is the correct currency for merchant account <b>%2$s</b>. You entered <b>%3$s</b>."
 msgstr ""
 
 #: includes/admin/settings/class-wc-braintree-merchant-account-settings.php:141
+#, php-format
 msgid "Merchant account error: %1$s is not a valid merchant account in your %2$s environment."
 msgstr ""
 
 #: includes/admin/settings/class-wc-braintree-merchant-account-settings.php:145
+#, php-format
 msgid "Error fetching your merchant accounts from Braintree for validation. Exception: %1$s"
 msgstr ""
 
@@ -1201,6 +1253,7 @@ msgid "Webook URL"
 msgstr ""
 
 #: includes/admin/settings/class-wc-braintree-subscription-settings.php:39
+#, php-format
 msgid ""
 "This is the URL that Braintree uses to send notifications such as when a subscription payment is processed. The plugin listens for these\n"
 "                                notifications and performs actions such as creating a renewal order. You must add this URL to your webhooks for subscriptions to stay in sync. %1$sWebhook guide%2$s"
@@ -1240,6 +1293,7 @@ msgid "To access your Braintree API keys do the following:"
 msgstr ""
 
 #: includes/admin/views/api-key-instructions.php:9
+#, php-format
 msgid "Click the gear %1$s  then click <b>API</b>"
 msgstr ""
 
@@ -1368,10 +1422,12 @@ msgid "To access your merchant accounts:"
 msgstr ""
 
 #: includes/admin/views/merchant-account-instructions.php:8
+#, php-format
 msgid "Login to your <a target=\"_blank\" href=\"%1$s\">Production</a> or <a target=\"_blank\" href=\"%2$s\">Sandbox</a> account."
 msgstr ""
 
 #: includes/admin/views/merchant-account-instructions.php:9
+#, php-format
 msgid "Click the gear %1$s  then click <b>Business</b>"
 msgstr ""
 
@@ -1405,11 +1461,25 @@ msgstr ""
 msgid "Braintree Payment Methods"
 msgstr ""
 
+#: includes/api/class-wc-braintree-controller-3ds.php:38
+msgid "User must be logged in to access this endpoint."
+msgstr ""
+
+#: includes/api/class-wc-braintree-controller-3ds.php:50
+msgid "Invalid token provided."
+msgstr ""
+
+#: includes/api/class-wc-braintree-controller-3ds.php:54
+msgid "You do not have access to this token."
+msgstr ""
+
 #: includes/api/class-wc-braintree-controller-applepay.php:110
+#, php-format
 msgid "The %1$sapple-developer-merchantid-domain-association%2$s file has been added to your root folder."
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-applepay.php:112
+#, php-format
 msgid "The %1$sapple-developer-merchantid-domain-association%2$s file could not be added to your root folder. You will need to add the file manually."
 msgstr ""
 
@@ -1418,10 +1488,12 @@ msgid "Apple Pay Integration Guide"
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-applepay.php:143
+#, php-format
 msgid "Domain %s registered in Braintree %s"
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-applepay.php:145
+#, php-format
 msgid "Failed to register domain %s in Braintree's %s environment. Exception: %s"
 msgstr ""
 
@@ -1430,7 +1502,7 @@ msgid "No shipping methods available for address."
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-cart.php:259
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:491
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:494
 msgid "No shipping methods for provided address"
 msgstr ""
 
@@ -1460,6 +1532,7 @@ msgid "Invalid request."
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-kount.php:91
+#, php-format
 msgid "Kount XML body: %1$s"
 msgstr ""
 
@@ -1468,10 +1541,12 @@ msgid "Invalid xml format."
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-kount.php:187
+#, php-format
 msgid "Transaction %1$s was not found in the Braintree %2$s system."
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-kount.php:208
+#, php-format
 msgid "Kount note: %s"
 msgstr ""
 
@@ -1489,6 +1564,7 @@ msgid "Order total must be greater than zero."
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-order-actions.php:226
+#, php-format
 msgid "This order has already been processed. Transaction ID: %1$s. Payment method: %2$s"
 msgstr ""
 
@@ -1505,14 +1581,17 @@ msgid "saved method"
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-plan.php:57
+#, php-format
 msgid "Error fetching plans. Environment: %1$s. Reason: %2$s"
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-plan.php:62
+#, php-format
 msgid "Error fetching plans. Environment: %1$s. Message: %2$s"
 msgstr ""
 
 #: includes/api/class-wc-braintree-controller-settings.php:52
+#, php-format
 msgid "%1$s connection test was successful."
 msgstr ""
 
@@ -1529,10 +1608,12 @@ msgid "An Authorization exception was thrown. This error typically happens when 
 msgstr ""
 
 #: includes/api/class-wc-braintree-rest-webhook-authentication.php:47
+#, php-format
 msgid "Webhook received. Kind: %1$s."
 msgstr ""
 
 #: includes/api/class-wc-braintree-rest-webhook-authentication.php:50
+#, php-format
 msgid "Error authenticating Braintree webhook request. Environment: %1$s. Reason: %2$s"
 msgstr ""
 
@@ -1561,18 +1642,22 @@ msgid "Use of bt_manager has been deprecated. Please use function braintree() in
 msgstr ""
 
 #: includes/class-wc-braintree-customer-manager.php:28
+#, php-format
 msgid "Error creating customer in Braintree. Reason: %s"
 msgstr ""
 
 #: includes/class-wc-braintree-customer-manager.php:33
+#, php-format
 msgid "Error updating customer in Braintree. Reason: %s"
 msgstr ""
 
 #: includes/class-wc-braintree-customer-manager.php:76
+#, php-format
 msgid "Error updating customer %1$s in gateway. Reason: %2$s"
 msgstr ""
 
 #: includes/class-wc-braintree-form-handler.php:31
+#, php-format
 msgid "Subscription %1$s has been cancelled."
 msgstr ""
 
@@ -1586,6 +1671,7 @@ msgstr ""
 
 #: includes/class-wc-braintree-payment-method-conversion.php:84
 #: includes/class-wc-braintree-payment-method-conversion.php:86
+#, php-format
 msgid "Error comparing payment methods in Braintree with WordPress. User ID: %1$s. Exception: %2$s"
 msgstr ""
 
@@ -1599,6 +1685,7 @@ msgstr ""
 
 #: includes/class-wc-braintree-query.php:47
 #: includes/subscriptions/wcs-braintree-functions.php:1486
+#, php-format
 msgid "Subscription #%1$s"
 msgstr ""
 
@@ -1609,10 +1696,12 @@ msgid "Change Payment Method"
 msgstr ""
 
 #: includes/class-wc-braintree-rest-api.php:50
+#, php-format
 msgid "%1$s is an invalid controller name."
 msgstr ""
 
 #: includes/class-wc-braintree-update.php:55
+#, php-format
 msgid "Thank you for updating Braintree for WooCommerce to version %1$s."
 msgstr ""
 
@@ -1627,6 +1716,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: includes/deprecated/wcs-braintree-deprecated-functions.php:84
+#, php-format
 msgid "There is %s subscription associated with this payment method."
 msgid_plural "There are %s subscriptions associated with this payment method."
 msgstr[0] ""
@@ -1661,6 +1751,7 @@ msgid "Gateway that integrates Apple Pay with your Braintree account."
 msgstr ""
 
 #: includes/gateways/class-wc-braintree-applepay-payment-gateway.php:222
+#, php-format
 msgid "%s is not a valid state. Use uppercase state abbreviation. California = CA"
 msgstr ""
 
@@ -1847,27 +1938,28 @@ msgstr ""
 msgid "Saved Account"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:337
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:340
+#, php-format
 msgid "Admin Notice: For virtual products, PayPal must send back the billing address. Click %1$shere%2$s to read how to enable this functionality."
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:663
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:666
 msgid "Display type"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:668
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:671
 msgid "Inline"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:669
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:672
 msgid "Vertical"
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:672
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:675
 msgid "This option determines if the PayPal button and Credit button are side by side or vertical."
 msgstr ""
 
-#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:675
+#: includes/gateways/class-wc-braintree-paypal-payment-gateway.php:678
 msgid "Enable Pay Later Msg"
 msgstr ""
 
@@ -2223,6 +2315,7 @@ msgid "Open Icons"
 msgstr ""
 
 #: includes/gateways/settings/cc-settings.php:60
+#, php-format
 msgid "This option determines the type of credit card icons that appear on your frontend. Open Example: %1$s vs  Enclosed Example: %2$s"
 msgstr ""
 
@@ -2644,6 +2737,7 @@ msgid "If no button demo appears then the device you are using does not support 
 msgstr ""
 
 #: includes/gateways/settings/local-payment-settings.php:15
+#, php-format
 msgid "If enabled, your site can accept %s through Braintree."
 msgstr ""
 
@@ -2698,6 +2792,7 @@ msgid "Billing Agreement Description"
 msgstr ""
 
 #: includes/gateways/settings/paypal-settings.php:119
+#, php-format
 msgid "Purchase agreement from %s."
 msgstr ""
 
@@ -2853,14 +2948,17 @@ msgid "Venmo Grey"
 msgstr ""
 
 #: includes/subscriptions/class-wc-braintree-subscription.php:69
+#, php-format
 msgid "Status cannot be updated to %1$s from %2$s."
 msgstr ""
 
 #: includes/subscriptions/class-wc-braintree-subscription.php:88
+#, php-format
 msgid "Subscription status changed from %1$s to %2$s."
 msgstr ""
 
 #: includes/subscriptions/class-wc-braintree-subscription.php:90
+#, php-format
 msgid "Subscription status set to %1$s."
 msgstr ""
 
@@ -2869,14 +2967,17 @@ msgid "Recurring Total:"
 msgstr ""
 
 #: includes/subscriptions/class-wc-braintree-subscriptions-cart.php:73
+#, php-format
 msgid "Error: product %1$s cannot be purchased using currency %2$s. You must assign a Braintree plan for currency %2$s."
 msgstr ""
 
 #: includes/subscriptions/class-wc-braintree-subscriptions-cart.php:376
+#, php-format
 msgid "%s Signup Fee"
 msgstr ""
 
 #: includes/subscriptions/class-wc-product-braintree-variable-subscription.php:70
+#, php-format
 msgid "From %1$s to %2$s"
 msgstr ""
 
@@ -2902,6 +3003,7 @@ msgid "never expires"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:55
+#, php-format
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] ""
@@ -2914,34 +3016,42 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:154
+#, php-format
 msgid " every %1$s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:159
+#, php-format
 msgid " with a %1$s-%2$s free trial"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:162
+#, php-format
 msgid " and a %1$s sign up fee"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:200
+#, php-format
 msgid " for %1$s %2$s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:466
+#, php-format
 msgid "%s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:466
+#, php-format
 msgid "/ %s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:496
+#, php-format
 msgid "every %s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:875
+#, php-format
 msgid "%1$s every %2$s"
 msgstr ""
 
@@ -2951,6 +3061,7 @@ msgid "Active"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:914
+#, php-format
 msgid "Active <span class=\"count\">(%s)</span>"
 msgid_plural "Active <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -2962,6 +3073,7 @@ msgid "Expired"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:922
+#, php-format
 msgid "Expired <span class=\"count\">(%s)</span>"
 msgid_plural "Expired <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -2973,6 +3085,7 @@ msgid "Past Due"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:930
+#, php-format
 msgid "Past Due <span class=\"count\">(%s)</span>"
 msgid_plural "Past Due <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -2993,6 +3106,7 @@ msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1190
 #: includes/subscriptions/wcs-braintree-functions.php:1192
+#, php-format
 msgid "Error syncing subscription %1$s. Reason: %1$s"
 msgstr ""
 
@@ -3002,26 +3116,32 @@ msgid "Subscriptions"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1266
+#, php-format
 msgid "Error cancelling subscription in Braintree. Reason: %1$s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1269
+#, php-format
 msgid "Error cancelling subscription in Braintree. Reason: %1$s."
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1361
+#, php-format
 msgid "Renewal order created via webhook for subscription %s"
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1362
+#, php-format
 msgid "Renewal order %s created from Braintree webhook."
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1365
+#, php-format
 msgid "Renewal order %1$s already created for transaction %2$s."
 msgstr ""
 
 #: includes/subscriptions/wcs-braintree-functions.php:1483
+#, php-format
 msgid "Please click OK if you wish to cancel subscription %1$s."
 msgstr ""
 
@@ -3163,6 +3283,7 @@ msgid "Kount review required"
 msgstr ""
 
 #: includes/wc-braintree-functions.php:1106
+#, php-format
 msgid "Kount review required <span class=\"count\">(%s)</span>"
 msgid_plural "Kount review required <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -3174,6 +3295,7 @@ msgid "Kount escalate"
 msgstr ""
 
 #: includes/wc-braintree-functions.php:1116
+#, php-format
 msgid "Kount escalate <span class=\"count\">(%s)</span>"
 msgid_plural "Kount escalate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -3269,6 +3391,7 @@ msgid "Please link your PayPal account in the Braintree control panel in order t
 msgstr ""
 
 #: includes/wc-braintree-message-functions.php:33
+#, php-format
 msgid "Please link your PayPal account in the Braintree control panel in order to use PayPal. %sHow to link a sandbox PayPal account.%s"
 msgstr ""
 
@@ -3290,6 +3413,7 @@ msgid "Please enter a locale that PayPal supports. You can change the locale in 
 msgstr ""
 
 #: includes/wc-braintree-message-functions.php:41
+#, php-format
 msgid "PayPal requires that you configure your merchant accounts. Navigate to the Braintree Plugin's Advanced Settings &#62; %1$sMerchant Accounts%2$s page and click %3$sImport Accounts%4$s."
 msgstr ""
 
@@ -5455,14 +5579,17 @@ msgid "Shipping"
 msgstr ""
 
 #: templates/cart/cart-totals.php:37
+#, php-format
 msgid "First renewal date: %s"
 msgstr ""
 
 #: templates/checkout/recurring-totals.php:53
+#, php-format
 msgid "First renewal: %s"
 msgstr ""
 
 #: templates/checkout/subscription-form-pay.php:62
+#, php-format
 msgid "Recurring Totals: #%1$s"
 msgstr ""
 
@@ -5484,6 +5611,7 @@ msgid "Processing..."
 msgstr ""
 
 #: templates/myaccount/change-payment-method.php:15
+#, php-format
 msgid "#%s"
 msgstr ""
 
@@ -5496,6 +5624,7 @@ msgid "Order Total"
 msgstr ""
 
 #: templates/myaccount/my-subscriptions.php:8
+#, php-format
 msgid "You have reached the end of your subscriptions. %sFirst page%s"
 msgstr ""
 

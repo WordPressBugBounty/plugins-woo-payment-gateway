@@ -17,9 +17,9 @@ class WC_Braintree_Manager {
 	 *
 	 * @var string
 	 */
-	public $version = '3.2.76';
+	public $version = '3.2.81';
 
-	public $js_sdk_version = '3.123.1';
+	public $js_sdk_version = '3.133.0';
 
 	public static $instance;
 
@@ -177,15 +177,15 @@ class WC_Braintree_Manager {
 		$this->plugin_validations();
 		load_plugin_textdomain( 'woo-payment-gateway', false, dirname( WC_BRAINTREE_PLUGIN_NAME ) . '/i18n/languages' );
 
-		if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
-			add_action( 'before_woocommerce_init', function () {
+		add_action( 'before_woocommerce_init', function () {
+			if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
 				try {
 					\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', $this->plugin_path() . 'braintree-payments.php', true );
 					\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', $this->plugin_path() . 'braintree-payments.php', true );
 				} catch ( \Exception $e ) {
 				}
-			} );
-		}
+			}
+		} );
 	}
 
 	/**

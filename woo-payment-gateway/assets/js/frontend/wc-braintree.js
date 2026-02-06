@@ -1284,7 +1284,7 @@
                 }
                 if (typeof window.paypal === 'undefined') {
                     this.submit_error('There was an error loading the PayPal SDK. Please provide the following details to your plugin developer.' +
-                        'PayPal config: ' + JSON.stringify(this.config.paypal) + 'PayPal SDK query: ' + $('#wc-braintree-paypal-checkout-js').attr('src'));
+                        'PayPal config: ' + JSON.stringify(this.config.paypal) + 'PayPal SDK query: ' + $('#wc-braintree-paypal-external-js').attr('src'));
                     return reject();
                 }
                 // don't render if checkout page. That will happen when 'updated_checkout' is triggered

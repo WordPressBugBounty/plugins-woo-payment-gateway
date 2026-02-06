@@ -1620,3 +1620,20 @@ function wc_braintree_get_checkout_fields( $page = '' ) {
 	 */
 	return apply_filters( 'wc_braintree_get_checkout_fields', $fields, $page );
 }
+
+function wc_braintree_get_script_handle( $handle ) {
+	if ( ! defined( 'WC_VERSION' ) || version_compare( WC_VERSION, '10.3.0', '<' ) ) {
+		return $handle;
+	}
+	switch ( $handle ) {
+		case 'jquery-blockui':
+		case 'jquery-tiptip':
+		case 'jquery-payment':
+		case 'jquery-cookie':
+			$handle = 'wc-' . $handle;
+			break;
+		default:
+	}
+
+	return $handle;
+}

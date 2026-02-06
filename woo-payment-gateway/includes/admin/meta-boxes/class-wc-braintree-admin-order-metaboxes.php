@@ -72,7 +72,7 @@ class WC_Braintree_Admin_Order_Metaboxes {
 			);
 			wp_enqueue_script( 'wc-braintree-admin-modals', braintree()->assets_path() . 'js/admin/modals.js', array(
 				'wc-backbone-modal',
-				'jquery-blockui'
+				wc_braintree_get_script_handle( 'jquery-blockui' )
 			), braintree()->version, true );
 		}
 	}

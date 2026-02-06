@@ -4,8 +4,8 @@ Donate link:
 Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocommerce
 Requires at least: 3.0.1
 Requires PHP: 5.6
-Tested up to: 6.8
-Stable tag: 3.2.76
+Tested up to: 6.9
+Stable tag: 3.2.81
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +78,25 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.81 - 12/19/25 =
+* Fixed - Google Pay 3DS error on checkout block
+* Updated - Improved compatability with the checkout block and cart block
+* Updated - WC tested up to 10.4
+* Updated - WordPress tested up to 6.9
+* Updated - When validating terms and conditions, make sure it's visible. Some checkout pages have hidden terms fields which can cause issues.
+= 3.2.80 - 11/24/25 =
+* Updated - Changed script handle for "https://www.paypal.com/sdk/js" to "wc-braintree-paypal-external" to ensure no conflicts with existing handle names. This change resolves a conflict
+that was discovered with Brick builder.
+* Updated - Braintree JS version to 3.133.0
+* Updated - Dropin UI version 1.46.0
+= 3.2.79 - 11/08/25 =
+- Fixed - When 3DS for vaulted cards is enabled, verify the token ID during request and verify authentication.
+= 3.2.78 - 10/25/25 =
+* Updated - WC tested up to 10.3
+* Updated - Updated use of script handles to use "wc-" prefix as part of WooCommerce 10.3.0
+= 3.2.77 - 10/08/25 =
+* Fixed - Checkout block issue with GPay where the payment nonce was not being submitted.
+* Updated - WC tested up to 10.2
 = 3.2.76 - 08/26/25 =
 * Fixed - Incompatibility notice that was showing on block editor. The Braintree plugin has supported the cart and checkout block for several years.
 * Fixed - Undefined variable $style in apply-pay.php template when Apple Pay used in a mini-cart

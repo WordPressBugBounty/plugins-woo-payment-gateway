@@ -29,16 +29,16 @@ class WC_Braintree_Admin_Assets {
 
 		wp_register_script( 'wc-braintree-admin-settings', $js_path . 'admin/admin-settings.js', array(
 			'jquery',
-			'jquery-blockui',
+			wc_braintree_get_script_handle( 'jquery-blockui' ),
 			'wc-backbone-modal'
 		), braintree()->version, true );
 		wp_register_script( 'wc-braintree-meta-boxes-order', $js_path . 'admin/meta-boxes-order.js', array(
 			'jquery',
-			'jquery-blockui'
+			wc_braintree_get_script_handle( 'jquery-blockui' )
 		), braintree()->version, true );
 		wp_register_script( 'wc-braintree-meta-boxes-subscription', $js_path . 'admin/meta-boxes-subscription.js', array(
 			'jquery',
-			'jquery-blockui'
+			wc_braintree_get_script_handle( 'jquery-blockui' )
 		), braintree()->version, true );
 		wp_register_script( 'wc-braintree-help', $js_path . 'admin/help-widget.js', array(), braintree()->version, true );
 		wp_register_style( 'wc-braintree-admin-style', $css_path . 'admin/admin.css', array(), braintree()->version );
@@ -133,7 +133,7 @@ class WC_Braintree_Admin_Assets {
 			wp_enqueue_style( 'wc-braintree-admin-style' );
 			wp_enqueue_script( 'wc-braintree-admin-users', $js_path . 'admin/users.js', array(
 				'jquery',
-				'jquery-blockui'
+				wc_braintree_get_script_handle( 'jquery-blockui' )
 			), braintree()->version, true );
 			wp_localize_script(
 				'wc-braintree-admin-users',
@@ -154,7 +154,7 @@ class WC_Braintree_Admin_Assets {
 			wp_enqueue_style( 'wc-braintree-admin-style' );
 			wp_enqueue_script( 'wc-braintree-data-migration', $js_path . 'admin/data-migration.js', array(
 				'jquery',
-				'jquery-blockui'
+				wc_braintree_get_script_handle( 'jquery-blockui' )
 			), braintree()->version, true );
 			wp_localize_script(
 				'wc-braintree-data-migration',
@@ -173,11 +173,11 @@ class WC_Braintree_Admin_Assets {
 				$js_path . 'admin/meta-boxes-product-data.js',
 				array(
 					'jquery',
-					'jquery-blockui',
+					wc_braintree_get_script_handle( 'jquery-blockui' ),
 					'jquery-ui-sortable',
 					'jquery-ui-widget',
 					'jquery-ui-core',
-					'jquery-tiptip',
+					wc_braintree_get_script_handle( 'jquery-tiptip' ),
 					'wc-backbone-modal'
 				),
 				braintree()->version,
