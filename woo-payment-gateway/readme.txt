@@ -5,7 +5,7 @@ Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocom
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 6.9
-Stable tag: 3.2.81
+Stable tag: 3.2.82
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +78,9 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.82 - 02/06/26 =
+* Fixed - On checkout block, only populate billing address if the address provided by PayPal is complete. PayPal sometimes provides an incomplete billing address.
+* Updated - WC tested up to 10.5
 = 3.2.81 - 12/19/25 =
 * Fixed - Google Pay 3DS error on checkout block
 * Updated - Improved compatability with the checkout block and cart block
