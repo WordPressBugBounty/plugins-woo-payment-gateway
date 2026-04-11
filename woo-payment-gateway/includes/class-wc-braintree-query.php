@@ -18,11 +18,14 @@ class WC_Braintree_Query {
 	}
 
 	public function initialize_endpoints() {
+		if ( ! braintree()->subscription_settings ) {
+			return;
+		}
 		$this->endpoints = array(
 			'subscriptions'         => braintree()->subscription_settings->get_option( 'subscriptions_endpoint' ),
 			'view-subscription'     => braintree()->subscription_settings->get_option( 'view_subscription_endpoint' ),
 			'change-payment-method' => braintree()->subscription_settings->get_option( 'change_payment_method_endpoint' ),
-			'cancel-subscription'   => 'cancel-subscripion',
+			'cancel-subscription'   => 'cancel-subscription',
 		);
 		foreach ( $this->endpoints as $endpoint => $value ) {
 			add_filter( 'woocommerce_endpoint_' . $endpoint . '_title', array( $this, 'endpoint_title' ), 10, 2 );
@@ -50,6 +53,7 @@ class WC_Braintree_Query {
 				$title = __( 'Change Payment Method', 'woo-payment-gateway' );
 				break;
 		}
+
 		return $title;
 	}
 
@@ -65,6 +69,7 @@ class WC_Braintree_Query {
 		if ( empty( $this->endpoints ) ) {
 			$this->initialize_endpoints();
 		}
+
 		return array_merge( $vars, $this->get_endpoints() );
 	}
 
@@ -80,4 +85,5 @@ class WC_Braintree_Query {
 		}
 	}
 }
+
 new WC_Braintree_Query();

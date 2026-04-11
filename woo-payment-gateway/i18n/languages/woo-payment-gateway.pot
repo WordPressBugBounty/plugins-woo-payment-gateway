@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Payment Plugins Braintree For WooCommerce plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.82\n"
+"Project-Id-Version: Payment Plugins Braintree For WooCommerce 3.2.83\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-payment-gateway\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-07T00:54:17+00:00\n"
+"POT-Creation-Date: 2026-04-10T23:29:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: woo-payment-gateway\n"
@@ -1679,17 +1679,17 @@ msgstr ""
 msgid "Subscription made through the Braintree Gateway."
 msgstr ""
 
-#: includes/class-wc-braintree-query.php:44
+#: includes/class-wc-braintree-query.php:47
 msgid "My Subscriptions"
 msgstr ""
 
-#: includes/class-wc-braintree-query.php:47
+#: includes/class-wc-braintree-query.php:50
 #: includes/subscriptions/wcs-braintree-functions.php:1486
 #, php-format
 msgid "Subscription #%1$s"
 msgstr ""
 
-#: includes/class-wc-braintree-query.php:50
+#: includes/class-wc-braintree-query.php:53
 #: includes/subscriptions/wcs-braintree-functions.php:1066
 #: templates/myaccount/change-payment-method.php:41
 msgid "Change Payment Method"

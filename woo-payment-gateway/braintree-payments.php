@@ -3,14 +3,14 @@
  * Plugin Name: Payment Plugins Braintree For WooCommerce
  * Plugin URI: https://docs.paymentplugins.com/wc-braintree/config
  * Description: Official partner of Braintree & PayPal. Accept Credit Cards, PayPal, Google Pay, Apple Pay, Venmo, and Local Payments.
- * Version: 3.2.82
+ * Version: 3.2.83
  * Author: Payment Plugins, support@paymentplugins.com
  * Author URI: https://docs.paymentplugins.com/wc-braintree/config
  * Text Domain: woo-payment-gateway
  * Domain Path: /i18n/languages/
- * Tested up to: 6.9
+ * Tested up to: 7.0
  * WC requires at least: 3.0.0
- * WC tested up to: 10.5
+ * WC tested up to: 10.7
  */
 defined( 'ABSPATH' ) || exit ();
 
