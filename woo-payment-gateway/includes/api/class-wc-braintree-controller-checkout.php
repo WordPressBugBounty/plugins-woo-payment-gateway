@@ -45,15 +45,11 @@ class WC_Braintree_Controller_Checkout extends WC_Braintree_Controller_Frontend 
 		$checkout       = WC()->checkout();
 		$payment_method = $request->get_param( 'payment_method' );
 		$this->gateway  = $gateway = WC()->payment_gateways()->payment_gateways()[ $payment_method ];
+		$tokenized_response = $request->get_param( $payment_method . '_tokenized_response' );
 		WC()->session->set(
 			$payment_method . '_tokenized_response',
 			json_decode(
-				stripslashes(
-					$request->get_param(
-						$payment_method .
-						'_tokenized_response'
-					)
-				),
+				$tokenized_response ? stripslashes( $tokenized_response ) : '',
 				true
 			)
 		);

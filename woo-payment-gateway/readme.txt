@@ -5,7 +5,7 @@ Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocom
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 7.0
-Stable tag: 3.2.83
+Stable tag: 3.2.84
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,8 +78,12 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.84 - 08/19/26 =
+* Updated - WC tested up to 11.0
+* Updated - Braintree JS version to 3.144.0
+* Fixed - Added null check to stripslashes function call in class-wc-braintree-controller-checkout.php to prevent notice in later versions of PHP.
 = 3.2.83 - 04/10/26 =
-* Updated = WP 7.0
+* Updated - WP 7.0
 * Updated - Add null check when action woocommerce_get_query_vars is triggered in case 3rd party plugins trigger that before woocommerce_init
 = 3.2.82 - 02/06/26 =
 * Fixed - On checkout block, only populate billing address if the address provided by PayPal is complete. PayPal sometimes provides an incomplete billing address.

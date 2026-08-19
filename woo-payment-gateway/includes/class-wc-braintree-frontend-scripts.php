@@ -393,6 +393,9 @@ class WC_Braintree_Frontend_Scripts {
 	}
 
 	private function enqueue_mini_cart() {
+		if ( ! wp_script_is( $this->get_handle( 'global' ), 'registered' ) ) {
+			return;
+		}
 		foreach ( WC()->payment_gateways()->get_available_payment_gateways() as $gateway ) {
 			/**
 			 * @var WC_Braintree_Payment_Gateway $gateway
