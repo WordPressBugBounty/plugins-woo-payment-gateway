@@ -17,7 +17,7 @@ class WC_Braintree_Manager {
 	 *
 	 * @var string
 	 */
-	public $version = '3.2.84';
+	public $version = '3.2.85';
 
 	public $js_sdk_version = '3.144.0';
 

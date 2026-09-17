@@ -57,6 +57,7 @@ class WC_Braintree_Venmo_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 			$this->get_localized_standard_params(),
 			array(
 				'html' => array( 'button' => wc_braintree_get_template_html( 'venmo-button.php' ) ),
+				'venmo_options' => []
 			)
 		);
 	}

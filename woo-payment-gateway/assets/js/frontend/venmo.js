@@ -41,11 +41,11 @@
     Venmo.prototype.create_instance = function (client, client_token) {
         this.clientInstance = client;
         this.initialize_fraud_tools();
-        braintree.venmo.create({
+        braintree.venmo.create($.extend({}, {
             client: this.clientInstance,
             allowNewBrowserTab: true,
             allowDesktop: true
-        }, function (err, venmoInstance) {
+        }, this.params.venmo_options), function (err, venmoInstance) {
             if (err) {
                 this.submit_error(err);
                 return;

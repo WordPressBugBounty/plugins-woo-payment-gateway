@@ -4,8 +4,8 @@ Donate link:
 Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocommerce
 Requires at least: 3.0.1
 Requires PHP: 5.6
-Tested up to: 7.0
-Stable tag: 3.2.84
+Tested up to: 7.1
+Stable tag: 3.2.85
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +78,11 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.85 - 09/17/26 =
+* Updated - WC tested up to 11.1
+* Updated - On the checkout block, the Venmo payment flow now triggers when the customer clicks the Place Order button like on the checkout shortcode. The Venmo button rendered in the
+payment method section has been removed to reduce confusion.
+* Added - A new "venmo_options" property has been added to the wc_braintree_venmo_params Javascript variable. The filter wc_braintree_localize_script_venmo can be used to customize the properties used in the client side Venmo integration.
 = 3.2.84 - 08/19/26 =
 * Updated - WC tested up to 11.0
 * Updated - Braintree JS version to 3.144.0
