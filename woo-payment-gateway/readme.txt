@@ -5,7 +5,7 @@ Tags: braintree, fastlane, braintree gateway, braintree plugin, braintree woocom
 Requires at least: 3.0.1
 Requires PHP: 5.6
 Tested up to: 7.1
-Stable tag: 3.2.85
+Stable tag: 3.2.86
 Copyright: Payment Plugins
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +78,9 @@ about and is expected behavior.
 8. Mini cart one click checkout
 
 == Changelog ===
+= 3.2.86 - 10/09/26 =
+* Updated - WC tested up to 11.2
+* Updated - The iframe that contains the PayPal buttons has a new title "PayPal checkout buttons" to improve accessibility.
 = 3.2.85 - 09/17/26 =
 * Updated - WC tested up to 11.1
 * Updated - On the checkout block, the Venmo payment flow now triggers when the customer clicks the Place Order button like on the checkout shortcode. The Venmo button rendered in the

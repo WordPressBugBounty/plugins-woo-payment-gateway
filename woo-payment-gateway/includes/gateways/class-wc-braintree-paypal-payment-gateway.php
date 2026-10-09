@@ -82,7 +82,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 
 	/**
 	 *
-	 * @param array $item
+	 * @param array            $item
 	 * @param WC_Payment_Token $payment_token
 	 */
 	public function payment_methods_list_item( $item, $payment_token ) {
@@ -210,7 +210,8 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 				),
 				'routes'            => array(
 					'paypal_shipping' => WC_Braintree_Rest_API::get_endpoint( braintree()->rest_api->paypal->rest_uri() . '/shipping' )
-				)
+				),
+				'button_title'      => __( 'PayPal checkout buttons', 'woo-payment-gateway' )
 			)
 		);
 
@@ -233,7 +234,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 		);
 
 		/**
-		 * @param array $options
+		 * @param array                        $options
 		 * @param WC_Braintree_Payment_Gateway $this
 		 *
 		 * @since 3.2.4
@@ -330,7 +331,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	 * Method that adds to the validation notice when the selected payment method is PayPal.
 	 *
 	 * @param string $notice
-	 * @param array $data
+	 * @param array  $data
 	 */
 	public function after_checkout_validation_notice( $notice, $data ) {
 		if ( $this->id === $data['payment_method'] ) {
@@ -481,7 +482,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	/**
-	 * @param array $data
+	 * @param array           $data
 	 * @param WP_REST_Request $request
 	 *
 	 * @return array
@@ -572,10 +573,10 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 
 	/**
 	 * @param WC_Shipping_Rate $method
-	 * @param int $index
-	 * @param bool $selected
-	 * @param float $amount
-	 * @param int $decimals
+	 * @param int              $index
+	 * @param bool             $selected
+	 * @param float            $amount
+	 * @param int              $decimals
 	 *
 	 * @return array
 	 */
@@ -596,7 +597,7 @@ class WC_Braintree_PayPal_Payment_Gateway extends WC_Braintree_Payment_Gateway {
 	}
 
 	/**
-	 * @param array $deps
+	 * @param array                         $deps
 	 * @param WC_Braintree_Frontend_Scripts $scripts
 	 */
 	public function get_mini_cart_dependencies( $deps, $scripts ) {

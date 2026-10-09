@@ -44,7 +44,8 @@ PayPal.prototype.create_instance = function () {
                 this.processingBannerCheckout = false;
                 paypal.Buttons($.extend({}, render_options, {
                     onInit: function () {
-
+                        $('.wc-braintree-paypal-top-container').find('iframe[name*="zoid__paypal_buttons"]').attr('title', this.params.button_title);
+                        $('.wc-braintree-paypal-top-container').find('iframe[name*="__detect_close_uid_"]').attr('aria-hidden', 'true');
                     }.bind(this),
                     onClick: function () {
                         this.set_payment_method(this.gateway_id);

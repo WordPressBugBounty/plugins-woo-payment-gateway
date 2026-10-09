@@ -1348,6 +1348,8 @@
                         }
                     }.bind(this));
                     this.$button = $buttonContainer.find('.paypal-buttons');
+                    this.$button.find('iframe[name*="zoid__paypal_buttons"]').attr('title', this.params.button_title);
+                    this.$button.find('iframe[name*="__detect_close_uid_"]').attr('aria-hidden', 'true');
                     resolve(true);
                 } else {
                     resolve(false);

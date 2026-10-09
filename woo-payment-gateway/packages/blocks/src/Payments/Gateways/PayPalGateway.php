@@ -36,15 +36,16 @@ class PayPalGateway extends AbstractGateway {
 				'expressCheckoutEnabled' => in_array( 'checkout_banner', $this->get_payment_sections() ),
 				'editor'                 => [
 					'icon' => $this->assets_api->assets_url( 'assets/img/paypal.svg' )
-				]
+				],
+				'buttonTitle'            => __( 'PayPal checkout buttons', 'woo-payment-gateway' )
 			];
 	}
 
 	/**
 	 * @param string $page
 	 *
-	 * @since 3.2.25
 	 * @return bool
+	 * @since 3.2.25
 	 */
 	private function is_bnpl_active( $page = 'checkout' ) {
 		return $this->get_setting( 'bnpl_enabled' ) === 'yes' && in_array( $page, $this->get_setting( 'bnpl_sections', [] ) );
